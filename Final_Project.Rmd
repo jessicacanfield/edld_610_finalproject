@@ -81,9 +81,10 @@ mlb <- import(here("Data", "MLB.xlsx")) %>%
   select(sport, team, year, capacity, attend_tot, attend_avg, games, ticket_price, home_wins) %>% 
   as_tibble()
 
-mlb <- mlb %>% mutate(capacity = numeric(capacity))
+mlb <- mlb %>% 
+  mutate(capacity = as.numeric(capacity), attend_tot = as.numeric(attend_tot),  attend_avg = as.numeric(attend_avg),games = as.numeric(games), ticket_price = as.numeric(ticket_price), home_wins = as.numeric(home_wins))
 
-is.character(mlb$capacity) 
+is.character(mlb$capacity)
 ```
 
 ```{r}
@@ -128,7 +129,6 @@ sports <- bind_rows(mlb, nba, ncaaf, nfl, nhl) %>% as_tibble()
 ```{r tidy}
 sports_rev <- sports %>%
   drop_na() %>%
-  filter(year >= 2010) %>%
   group_by(team, sport) %>%
   summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg)) 
 
@@ -138,6 +138,36 @@ sports_rev %>%
   geom_smooth(method = lm, se = FALSE) + 
   theme_minimal()
 
+sports_rev %>%
+  ggplot(aes(avg_homewins, avg_attendance, color = sport)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) + 
+  theme_minimal()
+
+sports_before <- sports %>%
+  drop_na() %>%
+  filter(year <= 2009, year >= 2007) %>%
+  group_by(team, sport) %>%
+  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg)) 
+
+sports_before %>%
+  ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) + 
+  theme_minimal()
+
+sports_after <- sports %>%
+  drop_na() %>%
+  filter(year <= 2012, year >= 2010) %>%
+  group_by(team, sport) %>%
+  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg)) 
+
+sports_after %>%
+  ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) + 
+  theme_minimal()
+  
 sports_rev %>%
   filter(sport == "MLB") %>%
   ggplot(aes(avg_homewins, avg_attendance)) +
