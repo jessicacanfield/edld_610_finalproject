@@ -71,6 +71,7 @@ library(janitor)
 library(stats)
 library(knitr)
 library(tidyr)
+library(lme4)
 
 ```
 
@@ -127,52 +128,53 @@ sports <- bind_rows(mlb, nba, ncaaf, nfl, nhl) %>% as_tibble()
 
 
 ```{r tidy}
+
+sports <- sports %>%
+  mutate(home_wins_pct = home_wins/games*100) %>%
+  drop_na()
+
 sports_rev <- sports %>%
-  drop_na() %>%
   group_by(team, sport) %>%
-  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg)) 
+  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg), avg_homewinspct = mean(home_wins_pct)) 
 
 sports_rev %>%
   ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +
   geom_point() +
   geom_smooth(method = lm, se = FALSE) + 
-  theme_minimal()
+  theme_minimal() 
 
 sports_rev %>%
-  ggplot(aes(avg_homewins, avg_attendance, color = sport)) +
+  ggplot(aes(avg_homewinspct, avg_attendance, color = sport)) +
   geom_point() +
   geom_smooth(method = lm, se = FALSE) + 
   theme_minimal()
 
-sports_before <- sports %>%
-  drop_na() %>%
-  filter(year <= 2009, year >= 2007) %>%
-  group_by(team, sport) %>%
-  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg)) 
+sports_crisis <- sports %>%
+  group_by(year, sport) %>%
+  summarize(avg_ticket_price = mean(ticket_price), avg_attendance = mean(attend_avg)) 
 
-sports_before %>%
-  ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +
-  geom_point() +
-  geom_smooth(method = lm, se = FALSE) + 
+sports_crisis %>%
+  filter(year >= 2005, year <= 2013) %>%
+  ggplot(aes(year, avg_ticket_price, color = sport)) +
+  geom_line() +
   theme_minimal()
 
-sports_after <- sports %>%
-  drop_na() %>%
-  filter(year <= 2012, year >= 2010) %>%
-  group_by(team, sport) %>%
-  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg)) 
-
-sports_after %>%
-  ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +
-  geom_point() +
-  geom_smooth(method = lm, se = FALSE) + 
+sports_crisis %>%
+  filter(year >= 2005, year <= 2013) %>%
+  ggplot(aes(year, avg_attendance, color = sport)) +
+  geom_line() +
   theme_minimal()
+
+fit = sports %>%
+  group_by(sport) %>%
+  do(model = lm(attend_avg ~ ticket_price + home_wins_pct, data = .))
   
 sports_rev %>%
   filter(sport == "MLB") %>%
-  ggplot(aes(avg_homewins, avg_attendance)) +
+  ggplot(aes(avg_homewinspct, avg_attendance)) +
   geom_point() +
-  geom_smooth(se = FALSE) 
+  geom_smooth(se = FALSE)
+
 ```
 
 ```{r pivot}
@@ -186,13 +188,16 @@ sports_pivot <- sports %>%
 
 
 ## Requirements 
-1. pivot_longer: Done
-2. pivot_wider: Done 
+1. pivot_longer: 
+2. pivot_wider: 
 3. group_by: Done
 4. summarize: Done
 5. filter: Done
 6. select: Done
-7. Mutate: Done 
+7. mutate: Done 
+8. one table: 
+9. two visualization: Done
+10. inline code: 
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
