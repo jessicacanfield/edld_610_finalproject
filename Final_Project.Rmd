@@ -22,23 +22,12 @@ authornote: |
   Jessica Canfield & Woocheol Kim are both Marketing PhD students at the University of Oregon.
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  Marketing research has frequently used the context of sports to explore one facet of consumption. Additionally, the data within the sports realm is well-documented and detailed across time which allows for analyses to be tracked across time and different locations. While the current analysis is mainly exploratory in nature the goal of this project is to familiarize ourselves with this dataset prior to using it in future marketing studies. In this project specifically we look at how the 2008 financial crisis impacts ticket price for professional sports teams. However, in the future we plan to use this data in conjunction with other datasets that have unique time and location identifiers to look more specifically at how consumers engage with sports in reaction to other events occuring simultaneously, whether that be financial crises, political uncertainty, or natural disasters.
   
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
   
   <!-- https://tinyurl.com/ybremelq -->
   
-keywords          : "sports, NBA, NHL, NFL, MLB"
+keywords          : "sports, NBA, NHL, NFL, MLB, NCAAF"
 wordcount         : "X"
 
 bibliography      : ["r-references.bib"]
@@ -79,50 +68,78 @@ library(lme4)
 mlb <- import(here("Data", "MLB.xlsx")) %>%
   characterize() %>%  
   clean_names() %>% 
-  select(sport, team, year, capacity, attend_tot, attend_avg, games, ticket_price, home_wins) %>% 
+  select(sport, team, year, capacity, 
+         attend_tot, attend_avg, games, 
+         ticket_price, home_wins) %>% 
   as_tibble()
 
 mlb <- mlb %>% 
-  mutate(capacity = as.numeric(capacity), attend_tot = as.numeric(attend_tot),  attend_avg = as.numeric(attend_avg),games = as.numeric(games), ticket_price = as.numeric(ticket_price), home_wins = as.numeric(home_wins))
+  mutate(capacity = as.numeric(capacity), 
+         attend_tot = as.numeric(attend_tot),  
+         attend_avg = as.numeric(attend_avg),
+         games = as.numeric(games), 
+         ticket_price = as.numeric(ticket_price), 
+         home_wins = as.numeric(home_wins))
 
-is.character(mlb$capacity)
+#is.character(mlb$capacity)
 ```
 
 ```{r}
 nba <- import(here("Data", "NBA.xlsx")) %>%
   characterize() %>%  
   clean_names()%>% 
-  select(sport, team, year, capacity, attend_tot, attend_avg, games, ticket_price, home_win)%>% 
+  select(sport, team, year, capacity, 
+         attend_tot, attend_avg, games, 
+         ticket_price, home_win) %>% 
   as_tibble() %>% 
   rename(home_wins = home_win) %>% 
   as_tibble()
 
-nba <- nba %>% mutate(capacity = as.numeric(capacity), attend_tot = as.numeric(attend_tot), attend_avg = as.numeric(attend_avg), games = as.numeric(games), ticket_price = as.numeric(ticket_price), home_wins = as.numeric(home_wins))
-
+nba <- nba %>% mutate(capacity = as.numeric(capacity), 
+                      attend_tot = as.numeric(attend_tot), 
+                      attend_avg = as.numeric(attend_avg), 
+                      games = as.numeric(games), 
+                      ticket_price = as.numeric(ticket_price), 
+                      home_wins = as.numeric(home_wins))
 
 ncaaf <- import(here("Data", "NCAAF.xlsx")) %>%
   characterize() %>%  
   clean_names() %>% 
-  select(sport, team, year, capacity, attend_tot, attend_avg, games, ticket_price, home_wins) %>% 
+  select(sport, team, year, capacity,
+         attend_tot, attend_avg, games, 
+         ticket_price, home_wins) %>% 
   as_tibble()
 
 nfl <- import(here("Data", "NFL.xlsx")) %>%
   characterize() %>%  
   clean_names()%>% 
-  select(sport, team, year, capacity, attend_tot, attend_avg, games, ticket_price, home_wins) %>% 
+  select(sport, team, year, capacity, 
+         attend_tot, attend_avg, games, 
+         ticket_price, home_wins) %>% 
   as_tibble()
 
-nfl <- nfl %>% mutate(attend_tot = as.numeric(attend_tot),  attend_avg = as.numeric(attend_avg),games = as.numeric(games), ticket_price = as.numeric(ticket_price), home_wins = as.numeric(home_wins))
+nfl <- nfl %>% mutate(attend_tot = as.numeric(attend_tot),  
+                      attend_avg = as.numeric(attend_avg),
+                      games = as.numeric(games), 
+                      ticket_price = as.numeric(ticket_price), 
+                      home_wins = as.numeric(home_wins))
 
 nhl <- import(here("Data", "NHL.xlsx")) %>%
   characterize() %>%  
   clean_names()%>% 
-  select(sport, team, year, capacity, attend_tot, attend_avg, games, ticket_price, home_wins) %>% 
+  select(sport, team, year, capacity, 
+         attend_tot, attend_avg, games, 
+         ticket_price, home_wins) %>% 
   as_tibble() 
 
-nhl <- nhl %>% mutate(attend_tot = as.numeric(attend_tot), attend_avg = as.numeric(attend_avg), games = as.numeric(games), ticket_price = as.numeric(ticket_price), home_wins = as.numeric(home_wins))
+nhl <- nhl %>% mutate(attend_tot = as.numeric(attend_tot),
+                      attend_avg = as.numeric(attend_avg), 
+                      games = as.numeric(games), 
+                      ticket_price = as.numeric(ticket_price),
+                      home_wins = as.numeric(home_wins))
 
-sports <- bind_rows(mlb, nba, ncaaf, nfl, nhl) %>% as_tibble()
+sports <- bind_rows(mlb, nba, ncaaf, nfl, nhl)%>% 
+  as_tibble()
 
 ```
 
@@ -135,35 +152,82 @@ sports <- sports %>%
 
 sports_rev <- sports %>%
   group_by(team, sport) %>%
-  summarize(avg_ticket_price = mean(ticket_price), avg_homewins = mean(home_wins), avg_attendance = mean(attend_avg), avg_homewinspct = mean(home_wins_pct)) 
+  summarize(avg_ticket_price = mean(ticket_price), 
+            avg_homewins = mean(home_wins), 
+            avg_attendance = mean(attend_avg), 
+            avg_homewinspct = mean(home_wins_pct)) 
+```
 
+```{r plots}
 sports_rev %>%
   ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +
   geom_point() +
   geom_smooth(method = lm, se = FALSE) + 
+    labs(x = "Average ticket price (in USD)", 
+       y = "Average attendance", 
+       title = "The Relationship Between Ticket Price & Attendance",
+       subtitle = "Examining major league sports in the US from 2000-2015)") +
+  theme_minimal() 
+
+sports_rev %>%
+  ggplot(aes(avg_ticket_price, avg_attendance, color = sport)) +   facet_wrap(~sport) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) + 
+  labs(x = "Average ticket price (in USD)", 
+       y = "Average attendance", 
+       title = "The Relationship Between Ticket Price & Attendance",
+       subtitle = "Examining major league sports in the US from 2000-2015") +
   theme_minimal() 
 
 sports_rev %>%
   ggplot(aes(avg_homewinspct, avg_attendance, color = sport)) +
   geom_point() +
   geom_smooth(method = lm, se = FALSE) + 
+   labs(x = "Average Percent of Wins at Home Stadium", 
+       y = "Average attendance", 
+       title = "The Relationship Home Wins and Attendance",
+       subtitle = "Examining major league sports in the US from 2000-2015") +
   theme_minimal()
 
+sports_rev %>%
+  ggplot(aes(avg_homewinspct, avg_attendance, color = sport)) +
+  facet_wrap(~sport)+
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) + 
+   labs(x = "Average Percent of Wins at Home Stadium", 
+       y = "Average attendance", 
+       title = "The Relationship Home Wins and Attendance",
+       subtitle = "Examining major league sports in the US from 2000-2015") +
+  theme_minimal()
+```
+
+```{r sports_crisis}
 sports_crisis <- sports %>%
   group_by(year, sport) %>%
-  summarize(avg_ticket_price = mean(ticket_price), avg_attendance = mean(attend_avg)) 
+  summarize(avg_ticket_price = mean(ticket_price), 
+            avg_attendance = mean(attend_avg)) 
 
 sports_crisis %>%
   filter(year >= 2005, year <= 2013) %>%
   ggplot(aes(year, avg_ticket_price, color = sport)) +
   geom_line() +
+  labs (x = "Year", 
+        y = "Average Ticket Price (in USD)", 
+        title = "Major League Sport Ticket Prices During a Financial Crisis",
+        subtitle = "Prices in USD from 2005 to 2013") +
   theme_minimal()
 
 sports_crisis %>%
   filter(year >= 2005, year <= 2013) %>%
   ggplot(aes(year, avg_attendance, color = sport)) +
+  facet_wrap(~sport) +
   geom_line() +
+   labs (x = "Year", 
+        y = "Average Attendence", 
+        title = "Major League Sport Attendence During a Financial Crisis",
+        subtitle = "Prices in USD from 2005 to 2013") +
   theme_minimal()
+
 
 fit = sports %>%
   group_by(sport) %>%
@@ -173,7 +237,12 @@ sports_rev %>%
   filter(sport == "MLB") %>%
   ggplot(aes(avg_homewinspct, avg_attendance)) +
   geom_point() +
-  geom_smooth(se = FALSE)
+  geom_smooth(se = FALSE)+
+  labs(x = "Average percent of home wins",
+       y = "Average attendance", 
+       title = "The Relationship Between Average Percent of Home Wins and Attendance",
+       subtitle = "MLB statistics from 2000-2015")+
+  theme_minimal()
 
 ```
 
@@ -186,10 +255,10 @@ sports_pivot <- sports %>%
 
 ```
 
-
+```{r eval = FALSE}
 ## Requirements 
-1. pivot_longer: 
-2. pivot_wider: 
+1. pivot_longer: done
+2. pivot_wider: done
 3. group_by: Done
 4. summarize: Done
 5. filter: Done
@@ -198,9 +267,11 @@ sports_pivot <- sports %>%
 8. one table: 
 9. two visualization: Done
 10. inline code: 
+```  
 
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+  The sports dataset comes from marketing professor Conor Henderson. It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA college football. For each sport, the data spans from 2000 through 2015 and is currently in the process of being updated through present. The data was originally compiled from a number of reputable sports-focused sources including Rodney Fort's Sports League Database as well as ESPN.
+  In the final dataset that combines all the sports we have 1398 observations across 15 years and 10 different variables. The 10 variables we selected were: sport, team, year, stadium capacity, total attendance, average attendance, number of games, ticket price (in USD), and the number of home wins. 
 
 ## Participants
 
@@ -215,6 +286,10 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 # Results
 
 # Discussion
+  Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [Chalmers2012differences;Shachar2011brands], sports games provide a form of entertainment that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
+  The current exploratory study provides inital insight into how major league attendance varries over time both in regard to attedance as well as ticket prices. Through the analysis, it is clear that each of the major league sports operates very differently from eachother inregard to the variables of interest isolated for the purposes of this research. 
+  As this dataset it used going forward, it will be important to identify more clearly the differences between each of the sports to understand if they can indeed be collapsed into an overarching category of "major league sports attendance" across all four major league sports (MLB, NBA, NFL, NHL). Another aspect that was not taken into account in the current research is team-specific factors including how long the team has beeen in a city as well as how many time a team has moved. 
+  
 
 
 \newpage
