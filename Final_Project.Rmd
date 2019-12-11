@@ -28,11 +28,10 @@ abstract: |
   <!-- https://tinyurl.com/ybremelq -->
   
 keywords          : "sports, NBA, NHL, NFL, MLB, NCAAF"
-wordcount         : "X"
 
 bibliography      : ["r-references.bib"]
 
-floatsintext      : no
+floatsintext      : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -41,12 +40,12 @@ mask              : no
 draft             : no
 
 documentclass     : "apa6"
-classoption       : "man"
+classoption       : "man, fleqn, noextraspace"
 output            : papaja::apa6_pdf
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, 
+knitr::opts_chunk$set(echo = FALSE, 
                       warning = FALSE,
                       message = FALSE)
 
@@ -60,13 +59,16 @@ library(janitor)
 library(stats)
 library(knitr)
 library(tidyr)
-library(lme4)
+library(kableExtra)
 
 ```
 
+# Introduction and Overview
+Humphreys [-@humphreys_2010] explores the impact of the global financial crisis on sport in North America. He finds that while attendance and franchise values declined slightly, and a few teams experienced financial problems, the nature of the sport product and institutional factors associated with the sports industry have, so far, insulted professional sport from significant negative impacts. Coates and Humphreys [-@coates_humphreys_2007] investigate the demand for attendance at professional sporting events using a data set that includes ticket prices and a price index reflecting prices for ancillary goods associated with attendance. Both mathematical modeling and empirical methodology are used in their research. [see @coates_humphreys_2007].
+
 ```{r import data}
 mlb <- import(here("Data", "MLB.xlsx")) %>%
-  characterize() %>%  
+  characterize() %>%
   clean_names() %>% 
   select(sport, team, year, capacity, 
          attend_tot, attend_avg, games, 
@@ -246,6 +248,32 @@ sports_rev %>%
 
 ```
 
+```{r summary table}
+sports %>%
+  group_by(sport) %>%
+  summarize(avg_attendance = mean(attend_avg),
+            avg_ticket_price = mean(ticket_price), 
+            avg_homewinspct = mean(home_wins_pct)) %>%
+  kable(digits = 2,
+        col.names = c("sport", "attendance_mean", "ticketprice_mean", "homewinpct_mean"), format = "latex")
+```
+
+```{r inline code}
+sports_crisis_before <- sports %>%
+  filter(sport == "MLB", year >= 2007, year <= 2009)
+
+sports_crisis_after <- sports %>%
+  filter(sport == "MLB", year >= 2010, year <= 2012)
+  
+attendance_before <- mean(sports_crisis_before$attend_avg, na.rm = TRUE)
+price_before <- mean(sports_crisis_before$ticket_price, na.rm = TRUE)
+attendance_after <- mean(sports_crisis_after$attend_avg, na.rm = TRUE)
+price_after <- mean(sports_crisis_after$ticket_price, na.rm = TRUE)
+
+```
+
+Average revenue per homegame of MLB spanning from 2007 and 2009 is $`r attendance_before*price_before` while the one for 3 years after **financial crisis** is $`r attendance_after*price_after`. Major League Baseball seems that it was not affected by depression in terms of *revenue* and it actually made more than before the crisis.
+
 ```{r pivot}
 sports_pivot <- sports %>%
   pivot_longer(home_wins, names_to = c("home", "wins"), names_sep = "_", values_to = "victory") %>%
@@ -264,9 +292,9 @@ sports_pivot <- sports %>%
 5. filter: Done
 6. select: Done
 7. mutate: Done 
-8. one table: 
+8. one table: Done
 9. two visualization: Done
-10. inline code: 
+10. inline code: Done
 ```  
 
 # Methods
@@ -284,6 +312,7 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
+In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem they are not as sensitive to win as other three leagues' fans are. 
 
 # Discussion
   Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [Chalmers2012differences;Shachar2011brands], sports games provide a form of entertainment that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
