@@ -44,7 +44,10 @@ classoption       : "man, fleqn, noextraspace"
 output            : papaja::apa6_pdf
 ---
 
+
 ```{r setup, include = FALSE}
+
+```{r setup, include = TRUE}
 knitr::opts_chunk$set(echo = FALSE, 
                       warning = FALSE,
                       message = FALSE)
@@ -72,7 +75,7 @@ mlb <- import(here("Data", "MLB.xlsx")) %>%
   select(sport, team, year, capacity, 
          attend_tot, attend_avg, games, 
          ticket_price, home_wins) %>% 
-  as_tibble()
+  as_tibble() 
 
 mlb <- mlb %>% 
   mutate(capacity = as.numeric(capacity), 
@@ -262,6 +265,7 @@ sports %>%
         col.names = c("sport", "attendance_mean", "ticketprice_mean", "homewinpct_mean"), format = "latex")
 ```
 
+
 ```{r inline code}
 sports_crisis_before <- sports %>%
   filter(sport == "MLB", year >= 2007, year <= 2009)
@@ -284,8 +288,6 @@ Average revenue per homegame for Major league Baseball (MLB) teams spanning from
 
 ## Average Home Game Revenue before and after economic recession
 Average revenue per homegame of MLB spanning from 2007 and 2009 is $`r attendance_before*price_before` while the revenue 3 years after the **financial crisis** is $`r attendance_after*price_after`. Major League Baseball seems that it was not affected by depression in terms of *revenue* and it actually made more than before the crisis.
-
-
 
 ```{r pivot}
 #demonstrating the use of both pivot_longer and pivot_wider
@@ -323,12 +325,18 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
+<<<<<<< Updated upstream
 In all four leagues, it turns out that average ticket price and average rate of home wins is positively associated with average home attendance even though NFL fans seem they are not as sensitive to wins as are the fans in the three other major league sports. This provides empirical evidence for a finding that is relativley intuitive in the sense that as teams win more, demand for tickets likely increases which would drive prices up. Ultimatley, people enjoy watching their home team win and as a result, are willing to pay more when their team is doing well in a given season. However, this is likely correlated with the outcomes of previous seasons as well. 
   In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem to be not as sensitive to win as other three leagues' fans are. In addition, the 2008 financial crisis did not result in crisis in the US professional sports leagues. While some of the leagues experienced slight decrease in home attendance, all four leagues got through economic downturn as if there was nothing happened. Actually, their home game average revenue went up after financial crisis. We assume this counterintuitive outcome is attributed to the facts that sports were kind of immuned to the crisis for some reason or even during recession people are willing to spend money for watching games.
 
 
 # Discussion
   Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [Chalmers2012differences;Shachar2011brands], sports games provide a form of entertainment from that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
+=======
+In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem to be not as sensitive to win as other three leagues' fans are. In addition, the 2008 financial crisis did not result in crisis in the US professional sports leagues. While some of the leagues experienced slight decrease in home attendance, all four leagues got through economic downturn as if there was nothing happened. Actually, their home game average revenue went up after financial crisis. We assume this counterintuitive outcome is attributed to the facts that sports are kind of immuned to the crisis for some reason or during the span some of big market teams opened brand new stadiums such as Yankee Stadium (2009, MLB), AT&T Stadium (2009, NFL), MetLife Stadium (2010, NFL). 
+
+# Discussion
+  Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [@chalmers_et_al_2012; @shankar_et_al_2011], sports games provide a form of entertainment that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
   The current exploratory study provides inital insight into how major league attendance varries over time both in regard to attedance as well as ticket prices. Through the analysis, it is clear that each of the major league sports operates very differently from eachother inregard to the variables of interest isolated for the purposes of this research. 
   As this dataset it used going forward, it will be important to identify more clearly the differences between each of the sports to understand if they can indeed be collapsed into an overarching category of "major league sports attendance" across all four major league sports (MLB, NBA, NFL, NHL). Another aspect that was not taken into account in the current research is team-specific factors including how long the team has been in a city as well as how many time a team has moved. 
   
