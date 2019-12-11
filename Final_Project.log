@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  10 DEC 2019 21:09
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.6)  10 DEC 2019 21:36
->>>>>>> master
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 DEC 2019 08:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,65 +572,47 @@ Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 30.
-<<<<<<< HEAD
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grffile.sty
-=======
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2019/10/22
-Style option: `fancyvrb' v3.3 <2019/10/22> (tvz)
-\FV@CodeLineNo=\count127
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2019/01/15
+Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+\FV@CodeLineNo=\count129
 \FV@InFile=\read1
 \FV@TabBox=\box33
-\c@FancyVerbLine=\count128
-\FV@StepNumber=\count129
+\c@FancyVerbLine=\count130
+\FV@StepNumber=\count131
 \FV@OutFile=\write5
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip69
-\fb@frw=\dimen147
-\fb@frh=\dimen148
-\FrameRule=\dimen149
-\FrameSep=\dimen150
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/grffile.sty
->>>>>>> master
+\OuterFrameSep=\skip70
+\fb@frw=\dimen148
+\fb@frh=\dimen149
+\FrameRule=\dimen150
+\FrameSep=\dimen151
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
 Package grffile Info: Option `multidot' is set to `true'.
 Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
-<<<<<<< HEAD
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count129
-\csq@gtype=\count130
-\csq@glevel=\count131
-\csq@qlevel=\count132
-\csq@maxlvl=\count133
-\csq@tshold=\count134
+\csq@reset=\count132
+\csq@gtype=\count133
+\csq@glevel=\count134
+\csq@qlevel=\count135
+\csq@maxlvl=\count136
+\csq@tshold=\count137
 \csq@ltx@everypar=\toks27
 (/usr/local/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2018/04/13 v5.2d csquotes generic definitions (JAW)
-=======
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
-\csq@reset=\count130
-\csq@gtype=\count131
-\csq@glevel=\count132
-\csq@qlevel=\count133
-\csq@maxlvl=\count134
-\csq@tshold=\count135
-\csq@ltx@everypar=\toks26
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2019/05/10 v5.2e csquotes generic definitions (JAW)
->>>>>>> master
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
@@ -646,96 +624,50 @@ Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 \symugrf@m=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
-<<<<<<< HEAD
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
-=======
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
->>>>>>> master
-\LTleft=\skip70
-\LTright=\skip71
-\LTpre=\skip72
-\LTpost=\skip73
-<<<<<<< HEAD
-\LTchunksize=\count135
-\LTcapwidth=\dimen148
-\LT@head=\box33
-\LT@firsthead=\box34
-\LT@foot=\box35
-\LT@lastfoot=\box36
-\LT@cols=\count136
-\LT@rows=\count137
-\c@LT@tables=\count138
-\c@LT@chunks=\count139
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count138
+\LTcapwidth=\dimen152
+\LT@head=\box34
+\LT@firsthead=\box35
+\LT@foot=\box36
+\LT@lastfoot=\box37
+\LT@cols=\count139
+\LT@rows=\count140
+\c@LT@tables=\count141
+\c@LT@chunks=\count142
 \LT@p@ftn=\toks28
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
-\multirow@colwidth=\skip74
-\multirow@cntb=\count140
-\multirow@dima=\skip75
-\bigstrutjot=\dimen149
+\multirow@colwidth=\skip75
+\multirow@cntb=\count143
+\multirow@dima=\skip76
+\bigstrutjot=\dimen153
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
-\col@sep=\dimen150
-\ar@mcellbox=\box37
-\extrarowheight=\dimen151
-\NC@list=\toks29
-\extratabsurround=\skip76
-\backup@length=\skip77
-\ar@cellbox=\box38
-)
-\TX@col@width=\dimen152
-\TX@old@table=\dimen153
-\TX@old@col=\dimen154
-\TX@target=\dimen155
-\TX@delta=\dimen156
-\TX@cols=\count141
-\TX@ftn=\toks30
-=======
-\LTchunksize=\count136
-\LTcapwidth=\dimen151
-\LT@head=\box34
-\LT@firsthead=\box35
-\LT@foot=\box36
-\LT@lastfoot=\box37
-\LT@cols=\count137
-\LT@rows=\count138
-\c@LT@tables=\count139
-\c@LT@chunks=\count140
-\LT@p@ftn=\toks27
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip74
-\multirow@cntb=\count141
-\multirow@dima=\skip75
-\bigstrutjot=\dimen152
-) (/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen153
+\col@sep=\dimen154
 \ar@mcellbox=\box38
-\extrarowheight=\dimen154
-\NC@list=\toks28
-\extratabsurround=\skip76
-\backup@length=\skip77
+\extrarowheight=\dimen155
+\NC@list=\toks29
+\extratabsurround=\skip77
+\backup@length=\skip78
 \ar@cellbox=\box39
 )
-\TX@col@width=\dimen155
-\TX@old@table=\dimen156
-\TX@old@col=\dimen157
-\TX@target=\dimen158
-\TX@delta=\dimen159
-\TX@cols=\count142
-\TX@ftn=\toks29
->>>>>>> master
+\TX@col@width=\dimen156
+\TX@old@table=\dimen157
+\TX@old@col=\dimen158
+\TX@target=\dimen159
+\TX@delta=\dimen160
+\TX@cols=\count144
+\TX@ftn=\toks30
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/threeparttablex/threeparttablex.s
 ty
@@ -745,149 +677,61 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2019/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip78
+\TPTL@width=\skip79
 )
-\longtablewidth=\skip79
-<<<<<<< HEAD
+\longtablewidth=\skip80
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count142
+\linenopenalty=\count145
 \output=\toks31
-\linenoprevgraf=\count143
-\linenumbersep=\dimen157
-\linenumberwidth=\dimen158
-\c@linenumber=\count144
-\c@pagewiselinenumber=\count145
-\c@LN@truepage=\count146
-\c@internallinenumber=\count147
-\c@internallinenumbers=\count148
-\quotelinenumbersep=\dimen159
-\bframerule=\dimen160
-\bframesep=\dimen161
-\bframebox=\box39
-=======
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count143
-\output=\toks30
-\linenoprevgraf=\count144
-\linenumbersep=\dimen160
-\linenumberwidth=\dimen161
-\c@linenumber=\count145
-\c@pagewiselinenumber=\count146
-\c@LN@truepage=\count147
-\c@internallinenumber=\count148
-\c@internallinenumbers=\count149
-\quotelinenumbersep=\dimen162
-\bframerule=\dimen163
-\bframesep=\dimen164
+\linenoprevgraf=\count146
+\linenumbersep=\dimen161
+\linenumberwidth=\dimen162
+\c@linenumber=\count147
+\c@pagewiselinenumber=\count148
+\c@LN@truepage=\count149
+\c@internallinenumber=\count150
+\c@internallinenumbers=\count151
+\quotelinenumbersep=\dimen163
+\bframerule=\dimen164
+\bframesep=\dimen165
 \bframebox=\box40
->>>>>>> master
 
 LaTeX Warning: Command \@parboxrestore  has changed.
                Check if current package is valid.
 
 LaTeX Info: Redefining \\ on input line 3056.
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/tocloft/tocloft.sty
-Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
-Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip80
-\cftbeforetoctitleskip=\skip81
-\cftaftertoctitleskip=\skip82
-\cftbeforepartskip=\skip83
-\cftpartnumwidth=\skip84
-\cftpartindent=\skip85
-\cftbeforesecskip=\skip86
-\cftsecindent=\skip87
-\cftsecnumwidth=\skip88
-\cftbeforesubsecskip=\skip89
-\cftsubsecindent=\skip90
-\cftsubsecnumwidth=\skip91
-\cftbeforesubsubsecskip=\skip92
-\cftsubsubsecindent=\skip93
-\cftsubsubsecnumwidth=\skip94
-\cftbeforeparaskip=\skip95
-\cftparaindent=\skip96
-\cftparanumwidth=\skip97
-\cftbeforesubparaskip=\skip98
-\cftsubparaindent=\skip99
-\cftsubparanumwidth=\skip100
-\cftbeforeloftitleskip=\skip101
-\cftafterloftitleskip=\skip102
-\cftbeforefigskip=\skip103
-\cftfigindent=\skip104
-\cftfignumwidth=\skip105
-\c@lofdepth=\count149
-\c@lotdepth=\count150
-\cftbeforelottitleskip=\skip106
-\cftafterlottitleskip=\skip107
-\cftbeforetabskip=\skip108
-\cfttabindent=\skip109
-\cfttabnumwidth=\skip110
-
-Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
- out. on input line 1147.
-
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 (./Final_Project.aux)
 \openout1 = `Final_Project.aux'.
 
-<<<<<<< HEAD
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 164.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 131.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 164.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
-=======
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-49.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 14
-9.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
->>>>>>> master
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 *geometry* driver: auto-detecting
@@ -926,16 +770,16 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen162
-\scratchbox=\box40
-\nofMPsegments=\count152
-\nofMParguments=\count153
+\scratchcounter=\count152
+\scratchdimen=\dimen166
+\scratchbox=\box41
+\nofMPsegments=\count153
+\nofMParguments=\count154
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen163
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
+\MPscratchCnt=\count155
+\MPscratchDim=\dimen167
+\MPnumerator=\count156
+\makeMPintoPDFobject=\count157
 \everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -962,8 +806,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-<<<<<<< HEAD
-LaTeX Info: Redefining \microtypecontext on input line 131.
+LaTeX Info: Redefining \microtypecontext on input line 164.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -977,122 +820,61 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 131.
+\AtBeginShipoutBox=\box42
+Package hyperref Info: Link coloring OFF on input line 164.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count157
+\c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
-=======
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 149.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/refcount.sty
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-)
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/gettitlestring.st
-y
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
-)
-\c@section@level=\count150
-)
-LaTeX Info: Redefining \ref on input line 149.
-LaTeX Info: Redefining \pageref on input line 149.
-LaTeX Info: Redefining \nameref on input line 149.
->>>>>>> master
+LaTeX Info: Redefining \ref on input line 164.
+LaTeX Info: Redefining \pageref on input line 164.
+LaTeX Info: Redefining \nameref on input line 164.
 (./Final_Project.out) (./Final_Project.out)
 \@outlinefile=\write6
 \openout6 = `Final_Project.out'.
 
-<<<<<<< HEAD
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 133.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 166.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 133.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 166.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 133.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 166.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 133
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 166
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 133
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 166
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 133.
+(Font)              <12> on input line 166.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 133.
+(Font)              <8> on input line 166.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 133.
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+(Font)              <6> on input line 166.
+LaTeX Font Info:    Try loading font information for U+msa on input line 166.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
-=======
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-51.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-51.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-51.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-151.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-151.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 151.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 151.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 151.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151
-.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
->>>>>>> master
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-<<<<<<< HEAD
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 166.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
-=======
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151
-.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
->>>>>>> master
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
@@ -1101,289 +883,137 @@ File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 ) [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-<<<<<<< HEAD
-<Final_Project_files/figure-latex/plots-1.pdf, id=50, 457.71pt x 316.18124pt>
-File: Final_Project_files/figure-latex/plots-1.pdf Graphic file (type pdf)
-<use Final_Project_files/figure-latex/plots-1.pdf>
-Package pdftex.def Info: Final_Project_files/figure-latex/plots-1.pdf  used on 
-input line 149.
-(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
-<Final_Project_files/figure-latex/plots-2.pdf, id=51, 469.755pt x 325.215pt>
-File: Final_Project_files/figure-latex/plots-2.pdf Graphic file (type pdf)
-<use Final_Project_files/figure-latex/plots-2.pdf>
-Package pdftex.def Info: Final_Project_files/figure-latex/plots-2.pdf  used on 
-input line 150.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<Final_Project_files/figure-latex/plots-3.pdf, id=52, 457.71pt x 316.18124pt>
-File: Final_Project_files/figure-latex/plots-3.pdf Graphic file (type pdf)
-<use Final_Project_files/figure-latex/plots-3.pdf>
-Package pdftex.def Info: Final_Project_files/figure-latex/plots-3.pdf  used on 
-input line 151.
-(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
-<Final_Project_files/figure-latex/plots-4.pdf, id=53, 469.755pt x 325.215pt>
-File: Final_Project_files/figure-latex/plots-4.pdf Graphic file (type pdf)
-<use Final_Project_files/figure-latex/plots-4.pdf>
-Package pdftex.def Info: Final_Project_files/figure-latex/plots-4.pdf  used on 
-input line 152.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 183.
 
-Overfull \hbox (16.88237pt too wide) in paragraph at lines 149--153
-[][] 
-=======
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-58.
-(/Users/woock/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 159.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 184.
 [3]
-Underfull \vbox (badness 10000) detected at line 237
+Underfull \vbox (badness 10000) detected at line 258
  []
 
 
-Underfull \vbox (badness 6001) has occurred while \output is active []
+Underfull \vbox (badness 10000) detected at line 258
+ []
 
 [4]
-Underfull \vbox (badness 10000) detected at line 237
+Underfull \vbox (badness 10000) detected at line 258
  []
 
 
-Underfull \vbox (badness 10000) detected at line 237
+Underfull \vbox (badness 10000) detected at line 258
  []
 
 [5]
-<"Final_Project_files/figure-latex/""plots-1".pdf, id=75, 469.755pt x 325.215pt
->
-File: "Final_Project_files/figure-latex/""plots-1".pdf Graphic file (type pdf)
-<use "Final_Project_files/figure-latex/""plots-1".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""plots-1".pdf  used
- on input line 268.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 268--269
-[][]  
- []
-
+<Final_Project_files/figure-latex/plots-1.pdf, id=74, 457.71pt x 316.18124pt>
+File: Final_Project_files/figure-latex/plots-1.pdf Graphic file (type pdf)
+<use Final_Project_files/figure-latex/plots-1.pdf>
+Package pdftex.def Info: Final_Project_files/figure-latex/plots-1.pdf  used on 
+input line 293.
+(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [6]
-<"Final_Project_files/figure-latex/""plots-2".pdf, id=80, 469.755pt x 325.215pt
->
-File: "Final_Project_files/figure-latex/""plots-2".pdf Graphic file (type pdf)
-<use "Final_Project_files/figure-latex/""plots-2".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""plots-2".pdf  used
- on input line 284.
+<Final_Project_files/figure-latex/plots-2.pdf, id=79, 469.755pt x 325.215pt>
+File: Final_Project_files/figure-latex/plots-2.pdf Graphic file (type pdf)
+<use Final_Project_files/figure-latex/plots-2.pdf>
+Package pdftex.def Info: Final_Project_files/figure-latex/plots-2.pdf  used on 
+input line 314.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 284--285
-[][]  
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1939) has occurred while \output is active []
 
 [7 <./Final_Project_files/figure-latex/plots-1.pdf>]
-<"Final_Project_files/figure-latex/""plots-3".pdf, id=91, 469.755pt x 325.215pt
->
-File: "Final_Project_files/figure-latex/""plots-3".pdf Graphic file (type pdf)
-<use "Final_Project_files/figure-latex/""plots-3".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""plots-3".pdf  used
- on input line 300.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 300--301
-[][]  
- []
-
+<Final_Project_files/figure-latex/plots-3.pdf, id=93, 457.71pt x 316.18124pt>
+File: Final_Project_files/figure-latex/plots-3.pdf Graphic file (type pdf)
+<use Final_Project_files/figure-latex/plots-3.pdf>
+Package pdftex.def Info: Final_Project_files/figure-latex/plots-3.pdf  used on 
+input line 334.
+(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [8 <./Final_Project_files/figure-latex/plots-2.pdf>]
-<"Final_Project_files/figure-latex/""plots-4".pdf, id=101, 469.755pt x 325.215p
-t>
-File: "Final_Project_files/figure-latex/""plots-4".pdf Graphic file (type pdf)
-<use "Final_Project_files/figure-latex/""plots-4".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""plots-4".pdf  used
- on input line 317.
+<Final_Project_files/figure-latex/plots-4.pdf, id=104, 469.755pt x 325.215pt>
+File: Final_Project_files/figure-latex/plots-4.pdf Graphic file (type pdf)
+<use Final_Project_files/figure-latex/plots-4.pdf>
+Package pdftex.def Info: Final_Project_files/figure-latex/plots-4.pdf  used on 
+input line 356.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 317--318
-[][]  
->>>>>>> master
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [9 <./Final_Project_files/figure-latex/plots-3.pdf>]
-Underfull \vbox (badness 10000) detected at line 336
+Underfull \vbox (badness 10000) detected at line 377
  []
 
-<<<<<<< HEAD
-[4 <./Final_Project_files/figure-latex/plots-2.pdf> <./Final_Project_files/figu
-re-latex/plots-3.pdf>]
-<Final_Project_files/figure-latex/sports_crisis-1.pdf, id=82, 457.71pt x 313.17
-pt>
+
+Underfull \vbox (badness 10000) detected at line 377
+ []
+
+[10 <./Final_Project_files/figure-latex/plots-4.pdf>]
+<Final_Project_files/figure-latex/sports_crisis-1.pdf, id=127, 457.71pt x 313.1
+7pt>
 File: Final_Project_files/figure-latex/sports_crisis-1.pdf Graphic file (type p
 df)
 <use Final_Project_files/figure-latex/sports_crisis-1.pdf>
 Package pdftex.def Info: Final_Project_files/figure-latex/sports_crisis-1.pdf  
-used on input line 154.
+used on input line 381.
 (pdftex.def)             Requested size: 457.72285pt x 313.17877pt.
-<Final_Project_files/figure-latex/sports_crisis-2.pdf, id=83, 469.755pt x 325.2
-15pt>
+
+Overfull \vbox (0.86003pt too high) detected at line 399
+ []
+
+[11 <./Final_Project_files/figure-latex/sports_crisis-1.pdf>]
+<Final_Project_files/figure-latex/sports_crisis-2.pdf, id=140, 469.755pt x 325.
+215pt>
 File: Final_Project_files/figure-latex/sports_crisis-2.pdf Graphic file (type p
 df)
 <use Final_Project_files/figure-latex/sports_crisis-2.pdf>
 Package pdftex.def Info: Final_Project_files/figure-latex/sports_crisis-2.pdf  
-used on input line 155.
-=======
-
-Underfull \vbox (badness 6825) has occurred while \output is active []
-
-[10 <./Final_Project_files/figure-latex/plots-4.pdf>]
-<"Final_Project_files/figure-latex/""sports_crisis-1".pdf, id=120, 469.755pt x 
-325.215pt>
-File: "Final_Project_files/figure-latex/""sports_crisis-1".pdf Graphic file (ty
-pe pdf)
-<use "Final_Project_files/figure-latex/""sports_crisis-1".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""sports_crisis-1".p
-df  used on input line 338.
+used on input line 403.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 338--339
-[][]  
- []
-
-<"Final_Project_files/figure-latex/""sports_crisis-2".pdf, id=121, 469.755pt x 
-325.215pt>
-File: "Final_Project_files/figure-latex/""sports_crisis-2".pdf Graphic file (ty
-pe pdf)
-<use "Final_Project_files/figure-latex/""sports_crisis-2".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""sports_crisis-2".p
-df  used on input line 355.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 355--356
-[][]  
- []
-
-[11 <./Final_Project_files/figure-latex/sports_crisis-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 374
- []
-
-
-Underfull \vbox (badness 6825) has occurred while \output is active []
-
 [12 <./Final_Project_files/figure-latex/sports_crisis-2.pdf>]
-<"Final_Project_files/figure-latex/""sports_crisis-3".pdf, id=140, 469.755pt x 
-325.215pt>
-File: "Final_Project_files/figure-latex/""sports_crisis-3".pdf Graphic file (ty
-pe pdf)
-<use "Final_Project_files/figure-latex/""sports_crisis-3".pdf>
-Package pdftex.def Info: "Final_Project_files/figure-latex/""sports_crisis-3".p
-df  used on input line 376.
->>>>>>> master
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<Final_Project_files/figure-latex/sports_crisis-3.pdf, id=84, 468.75125pt x 316
-.18124pt>
+<Final_Project_files/figure-latex/sports_crisis-3.pdf, id=151, 468.75125pt x 31
+6.18124pt>
 File: Final_Project_files/figure-latex/sports_crisis-3.pdf Graphic file (type p
 df)
 <use Final_Project_files/figure-latex/sports_crisis-3.pdf>
 Package pdftex.def Info: Final_Project_files/figure-latex/sports_crisis-3.pdf  
-used on input line 156.
+used on input line 428.
 (pdftex.def)             Requested size: 468.75009pt x 316.18047pt.
-
-<<<<<<< HEAD
-Overfull \hbox (16.87538pt too wide) in paragraph at lines 154--157
-[][] 
- []
-
-
+[13 <./Final_Project_files/figure-latex/sports_crisis-3.pdf>] [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[5 <./Final_Project_files/figure-latex/plots-4.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[6 <./Final_Project_files/figure-latex/sports_crisis-1.pdf> <./Final_Project_fi
-les/figure-latex/sports_crisis-2.pdf>] [7 <./Final_Project_files/figure-latex/s
-ports_crisis-3.pdf>] [8] [9]
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
-[10] [11] (./Final_Project.lof)
-\tf@lof=\write6
-\openout6 = `Final_Project.lof'.
-
-AED endfloat: Processing end Figures and Tables [12
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
+[15] [16] [17] [18] AED endfloat: Processing end Figures and Tables [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 714.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 714.
 (./Final_Project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 714.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 714.
 Package rerunfilecheck Info: File `Final_Project.out' has not changed.
-(rerunfilecheck)             Checksum: DDC9DB43ACC9C27AAC866594AB4080E6;1007.
+(rerunfilecheck)             Checksum: 8E5F3AFB0E0293D64110F746C520FA2B;1986.
  ) 
 Here is how much of TeX's memory you used:
- 15697 strings out of 492616
- 234439 string characters out of 6129482
- 352641 words of memory out of 5000000
- 19268 multiletter control sequences out of 15000+600000
- 49989 words of font info for 74 fonts, out of 8000000 for 9000
+ 16016 strings out of 492616
+ 239502 string characters out of 6129482
+ 363781 words of memory out of 5000000
+ 19560 multiletter control sequences out of 15000+600000
+ 50944 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,47p,800b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,47p,800b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
 texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
 19/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2019/texmf-di
 st/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
 e1/public/lm/lmri12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-lm/lmss8.pfb>
-Output written on Final_Project.pdf (12 pages, 198192 bytes).
+lm/lmss8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtk10.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on Final_Project.pdf (19 pages, 288984 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 6244 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-Overfull \hbox (28.90639pt too wide) in paragraph at lines 376--377
-[][]  
- []
-
-[13 <./Final_Project_files/figure-latex/sports_crisis-3.pdf>] [14] [15] [16] [1
-7] AED endfloat: Processing end Figures and Tables [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
-(./Final_Project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 539.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 539.
-Package rerunfilecheck Info: File `Final_Project.out' has not changed.
-(rerunfilecheck)             Checksum: 2A03646518D32522A1DCDCED4244BCD4;1862.
- ) 
-Here is how much of TeX's memory you used:
- 14609 strings out of 494111
- 214422 string characters out of 6170577
- 294571 words of memory out of 5000000
- 18375 multiletter control sequences out of 15000+600000
- 48578 words of font info for 53 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 46i,11n,51p,1023b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/woock/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</Users
-/woock/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/wooc
-k/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/woock/Libr
-ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/woock/Library/Tin
-yTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/woock/Library/TinyTeX/
-texmf-dist/fonts/type1/public/lm/lmss8.pfb></Users/woock/Library/TinyTeX/texmf-
-dist/fonts/type1/public/lm/lmtk10.pfb></Users/woock/Library/TinyTeX/texmf-dist/
-fonts/type1/public/lm/lmtt12.pfb></Users/woock/Library/TinyTeX/texmf-dist/fonts
-/type1/public/lm/lmtti10.pfb>
-Output written on Final_Project.pdf (18 pages, 279958 bytes).
-PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
+ 273 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
  58 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> master
+ 6260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
