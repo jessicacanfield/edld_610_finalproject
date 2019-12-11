@@ -400,7 +400,7 @@ Humphreys, 2007).
 
 \begin{figure}
 \centering
-\includegraphics{Final_Project_files/figure-latex/sports_crisis-2.pdf}
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-1-1.pdf}
 \caption{}
 \end{figure}
 
@@ -425,7 +425,7 @@ Humphreys, 2007).
 
 \begin{figure}
 \centering
-\includegraphics{Final_Project_files/figure-latex/sports_crisis-3.pdf}
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-1-2.pdf}
 \caption{}
 \end{figure}
 
@@ -465,7 +465,9 @@ NHL & 17342.74 & 51.76 & 55.94\\
 \StringTok{  }\KeywordTok{filter}\NormalTok{(sport }\OperatorTok{==}\StringTok{ "MLB"}\NormalTok{, year }\OperatorTok{>=}\StringTok{ }\DecValTok{2007}\NormalTok{, year }\OperatorTok{<=}\StringTok{ }\DecValTok{2009}\NormalTok{)}
 
 \NormalTok{sports_crisis_after <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{filter}\NormalTok{(sport }\OperatorTok{==}\StringTok{ "MLB"}\NormalTok{, year }\OperatorTok{>=}\StringTok{ }\DecValTok{2010}\NormalTok{, year }\OperatorTok{<=}\StringTok{ }\DecValTok{2012}\NormalTok{)}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(sport }\OperatorTok{==}\StringTok{ "MLB"}\NormalTok{, }
+\NormalTok{         year }\OperatorTok{>=}\StringTok{ }\DecValTok{2010}\NormalTok{, }
+\NormalTok{         year }\OperatorTok{<=}\StringTok{ }\DecValTok{2012}\NormalTok{)}
   
 \NormalTok{attendance_before <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(sports_crisis_before}\OperatorTok{$}\NormalTok{attend_avg, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
 \NormalTok{price_before <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(sports_crisis_before}\OperatorTok{$}\NormalTok{ticket_price, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
@@ -486,10 +488,10 @@ we would need to account for other variables.
 recession}\label{average-home-game-revenue-before-and-after-economic-recession}
 
 Average revenue per homegame of MLB spanning from 2007 and 2009 is
-\$794,445.22 while the one for 3 years after \textbf{financial crisis}
-is \$818,114.18. Major League Baseball seems that it was not affected by
-depression in terms of \emph{revenue} and it actually made more than
-before the crisis.
+\$794,445.22 while the revenue 3 years after the \textbf{financial
+crisis} is \$818,114.18. Major League Baseball seems that it was not
+affected by depression in terms of \emph{revenue} and it actually made
+more than before the crisis.
 
 \begin{Shaded}
 \begin{Highlighting}[]
