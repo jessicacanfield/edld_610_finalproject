@@ -45,7 +45,7 @@ output            : papaja::apa6_pdf
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, 
+knitr::opts_chunk$set(echo = TRUE, 
                       warning = FALSE,
                       message = FALSE)
 
@@ -59,7 +59,6 @@ library(janitor)
 library(stats)
 library(knitr)
 library(tidyr)
-library(kableExtra)
 
 ```
 
@@ -248,7 +247,8 @@ sports_rev %>%
 
 ```
 
-```{r summary table}
+# Average Home Attendance, Average Home Ticket Price and Average Home Win pct by Sports (2000-2015)
+```{r summary table, results="asis"}
 sports %>%
   group_by(sport) %>%
   summarize(avg_attendance = mean(attend_avg),
@@ -272,7 +272,10 @@ price_after <- mean(sports_crisis_after$ticket_price, na.rm = TRUE)
 
 ```
 
+
+# Average Home Game Revenue before and after economics recession
 Average revenue per homegame of MLB spanning from 2007 and 2009 is $`r attendance_before*price_before` while the one for 3 years after **financial crisis** is $`r attendance_after*price_after`. Major League Baseball seems that it was not affected by depression in terms of *revenue* and it actually made more than before the crisis.
+
 
 ```{r pivot}
 sports_pivot <- sports %>%
@@ -285,8 +288,8 @@ sports_pivot <- sports %>%
 
 ```{r eval = FALSE}
 ## Requirements 
-1. pivot_longer: done
-2. pivot_wider: done
+1. pivot_longer: Done
+2. pivot_wider: Done
 3. group_by: Done
 4. summarize: Done
 5. filter: Done
@@ -301,23 +304,17 @@ sports_pivot <- sports %>%
   The sports dataset comes from marketing professor Conor Henderson. It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA college football. For each sport, the data spans from 2000 through 2015 and is currently in the process of being updated through present. The data was originally compiled from a number of reputable sports-focused sources including Rodney Fort's Sports League Database as well as ESPN.
   In the final dataset that combines all the sports we have 1398 observations across 15 years and 10 different variables. The 10 variables we selected were: sport, team, year, stadium capacity, total attendance, average attendance, number of games, ticket price (in USD), and the number of home wins. 
 
-## Participants
-
-## Material
-
-## Procedure
-
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
-In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem they are not as sensitive to win as other three leagues' fans are. 
+In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem to be not as sensitive to win as other three leagues' fans are. In addition, the 2008 financial crisis did not result in crisis in the US professional sports leagues. While some of the leagues experienced slight decrease in home attendance, all four leagues got through economic downturn as if there was nothing happened. Actually, their home game average revenue went up after financial crisis. We assume this counterintuitive outcome is attributed to the facts that sports were kind of immuned to the crisis for some reason or even during recession people are willing to spend money for watching games.
 
 # Discussion
   Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [Chalmers2012differences;Shachar2011brands], sports games provide a form of entertainment that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
   The current exploratory study provides inital insight into how major league attendance varries over time both in regard to attedance as well as ticket prices. Through the analysis, it is clear that each of the major league sports operates very differently from eachother inregard to the variables of interest isolated for the purposes of this research. 
-  As this dataset it used going forward, it will be important to identify more clearly the differences between each of the sports to understand if they can indeed be collapsed into an overarching category of "major league sports attendance" across all four major league sports (MLB, NBA, NFL, NHL). Another aspect that was not taken into account in the current research is team-specific factors including how long the team has beeen in a city as well as how many time a team has moved. 
+  As this dataset it used going forward, it will be important to identify more clearly the differences between each of the sports to understand if they can indeed be collapsed into an overarching category of "major league sports attendance" across all four major league sports (MLB, NBA, NFL, NHL). Another aspect that was not taken into account in the current research is team-specific factors including how long the team has been in a city as well as how many time a team has moved. 
   
 
 
