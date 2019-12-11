@@ -1,5 +1,5 @@
 ---
-title             : "Trends in Major League Sports in the U.S. from 2000-2015"
+title             : "Trends in Major League Sports in the U.S. From 2000-2015"
 shorttitle        : "Exploring Trends in Major League Sports "
 
 author: 
@@ -45,7 +45,7 @@ output            : papaja::apa6_pdf
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, 
+knitr::opts_chunk$set(echo = FALSE, 
                       warning = FALSE,
                       message = FALSE)
 

@@ -29,46 +29,6 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -179,202 +139,10 @@ ancillary goods associated with attendance. Both mathematical modeling
 and empirical methodology are used in their research (see Coates \&
 Humphreys, 2007).
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{mlb <-}\StringTok{ }\KeywordTok{import}\NormalTok{(}\KeywordTok{here}\NormalTok{(}\StringTok{"Data"}\NormalTok{, }\StringTok{"MLB.xlsx"}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{characterize}\NormalTok{() }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{clean_names}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{select}\NormalTok{(sport, team, year, capacity, }
-\NormalTok{         attend_tot, attend_avg, games, }
-\NormalTok{         ticket_price, home_wins) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{()}
-
-\NormalTok{mlb <-}\StringTok{ }\NormalTok{mlb }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{capacity =} \KeywordTok{as.numeric}\NormalTok{(capacity), }
-         \DataTypeTok{attend_tot =} \KeywordTok{as.numeric}\NormalTok{(attend_tot),  }
-         \DataTypeTok{attend_avg =} \KeywordTok{as.numeric}\NormalTok{(attend_avg),}
-         \DataTypeTok{games =} \KeywordTok{as.numeric}\NormalTok{(games), }
-         \DataTypeTok{ticket_price =} \KeywordTok{as.numeric}\NormalTok{(ticket_price), }
-         \DataTypeTok{home_wins =} \KeywordTok{as.numeric}\NormalTok{(home_wins))}
-
-\CommentTok{#is.character(mlb$capacity)}
-
-\NormalTok{nba <-}\StringTok{ }\KeywordTok{import}\NormalTok{(}\KeywordTok{here}\NormalTok{(}\StringTok{"Data"}\NormalTok{, }\StringTok{"NBA.xlsx"}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{characterize}\NormalTok{() }\OperatorTok{%>%}\StringTok{  }
-\StringTok{  }\KeywordTok{clean_names}\NormalTok{()}\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{select}\NormalTok{(sport, team, year, capacity, }
-\NormalTok{         attend_tot, attend_avg, games, }
-\NormalTok{         ticket_price, home_win) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{rename}\NormalTok{(}\DataTypeTok{home_wins =}\NormalTok{ home_win) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{()}
-
-\NormalTok{nba <-}\StringTok{ }\NormalTok{nba }\OperatorTok{%>%}\StringTok{ }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{capacity =} \KeywordTok{as.numeric}\NormalTok{(capacity), }
-                      \DataTypeTok{attend_tot =} \KeywordTok{as.numeric}\NormalTok{(attend_tot), }
-                      \DataTypeTok{attend_avg =} \KeywordTok{as.numeric}\NormalTok{(attend_avg), }
-                      \DataTypeTok{games =} \KeywordTok{as.numeric}\NormalTok{(games), }
-                      \DataTypeTok{ticket_price =} \KeywordTok{as.numeric}\NormalTok{(ticket_price), }
-                      \DataTypeTok{home_wins =} \KeywordTok{as.numeric}\NormalTok{(home_wins))}
-
-\NormalTok{ncaaf <-}\StringTok{ }\KeywordTok{import}\NormalTok{(}\KeywordTok{here}\NormalTok{(}\StringTok{"Data"}\NormalTok{, }\StringTok{"NCAAF.xlsx"}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{characterize}\NormalTok{() }\OperatorTok{%>%}\StringTok{  }
-\StringTok{  }\KeywordTok{clean_names}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{select}\NormalTok{(sport, team, year, capacity,}
-\NormalTok{         attend_tot, attend_avg, games, }
-\NormalTok{         ticket_price, home_wins) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{()}
-
-\NormalTok{nfl <-}\StringTok{ }\KeywordTok{import}\NormalTok{(}\KeywordTok{here}\NormalTok{(}\StringTok{"Data"}\NormalTok{, }\StringTok{"NFL.xlsx"}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{characterize}\NormalTok{() }\OperatorTok{%>%}\StringTok{  }
-\StringTok{  }\KeywordTok{clean_names}\NormalTok{()}\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{select}\NormalTok{(sport, team, year, capacity, }
-\NormalTok{         attend_tot, attend_avg, games, }
-\NormalTok{         ticket_price, home_wins) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{()}
-
-\NormalTok{nfl <-}\StringTok{ }\NormalTok{nfl }\OperatorTok{%>%}\StringTok{ }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{attend_tot =} \KeywordTok{as.numeric}\NormalTok{(attend_tot),  }
-                      \DataTypeTok{attend_avg =} \KeywordTok{as.numeric}\NormalTok{(attend_avg),}
-                      \DataTypeTok{games =} \KeywordTok{as.numeric}\NormalTok{(games), }
-                      \DataTypeTok{ticket_price =} \KeywordTok{as.numeric}\NormalTok{(ticket_price), }
-                      \DataTypeTok{home_wins =} \KeywordTok{as.numeric}\NormalTok{(home_wins))}
-
-\NormalTok{nhl <-}\StringTok{ }\KeywordTok{import}\NormalTok{(}\KeywordTok{here}\NormalTok{(}\StringTok{"Data"}\NormalTok{, }\StringTok{"NHL.xlsx"}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{characterize}\NormalTok{() }\OperatorTok{%>%}\StringTok{  }
-\StringTok{  }\KeywordTok{clean_names}\NormalTok{()}\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{select}\NormalTok{(sport, team, year, capacity, }
-\NormalTok{         attend_tot, attend_avg, games, }
-\NormalTok{         ticket_price, home_wins) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{() }
-
-\NormalTok{nhl <-}\StringTok{ }\NormalTok{nhl }\OperatorTok{%>%}\StringTok{ }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{attend_tot =} \KeywordTok{as.numeric}\NormalTok{(attend_tot),}
-                      \DataTypeTok{attend_avg =} \KeywordTok{as.numeric}\NormalTok{(attend_avg), }
-                      \DataTypeTok{games =} \KeywordTok{as.numeric}\NormalTok{(games), }
-                      \DataTypeTok{ticket_price =} \KeywordTok{as.numeric}\NormalTok{(ticket_price),}
-                      \DataTypeTok{home_wins =} \KeywordTok{as.numeric}\NormalTok{(home_wins))}
-
-\NormalTok{sports <-}\StringTok{ }\KeywordTok{bind_rows}\NormalTok{(mlb, nba, ncaaf, nfl, nhl)}\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{as_tibble}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#creating a new variable, the percent of home wins for a team in a given year}
-\NormalTok{sports <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{home_wins_pct =}\NormalTok{ home_wins}\OperatorTok{/}\NormalTok{games}\OperatorTok{*}\DecValTok{100}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{drop_na}\NormalTok{()}
-
-\CommentTok{#creating new variables that are the averages of ticket price, home wins, average attendance, and the percent of home wins}
-\NormalTok{sports_rev <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{group_by}\NormalTok{(team, sport) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{summarize}\NormalTok{(}\DataTypeTok{avg_ticket_price =} \KeywordTok{mean}\NormalTok{(ticket_price), }
-            \DataTypeTok{avg_homewins =} \KeywordTok{mean}\NormalTok{(home_wins), }
-            \DataTypeTok{avg_attendance =} \KeywordTok{mean}\NormalTok{(attend_avg), }
-            \DataTypeTok{avg_homewinspct =} \KeywordTok{mean}\NormalTok{(home_wins_pct)) }
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_rev }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(avg_ticket_price, avg_attendance, }\DataTypeTok{color =}\NormalTok{ sport)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method =}\NormalTok{ lm, }\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{    }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Average ticket price (in USD)"}\NormalTok{, }
-       \DataTypeTok{y =} \StringTok{"Average attendance"}\NormalTok{, }
-       \DataTypeTok{title =} \StringTok{"The Relationship Between Ticket Price & Attendance"}\NormalTok{,}
-       \DataTypeTok{subtitle =} \StringTok{"Examining major league sports in the US from 2000-2015)"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{() }
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
 \includegraphics{Final_Project_files/figure-latex/plots-1.pdf}
-\caption{}
-\end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_rev }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(avg_ticket_price, avg_attendance, }\DataTypeTok{color =}\NormalTok{ sport)) }\OperatorTok{+}\StringTok{   }\KeywordTok{facet_wrap}\NormalTok{(}\OperatorTok{~}\NormalTok{sport) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method =}\NormalTok{ lm, }\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Average ticket price (in USD)"}\NormalTok{, }
-       \DataTypeTok{y =} \StringTok{"Average attendance"}\NormalTok{, }
-       \DataTypeTok{title =} \StringTok{"The Relationship Between Ticket Price & Attendance"}\NormalTok{,}
-       \DataTypeTok{subtitle =} \StringTok{"Examining major league sports in the US from 2000-2015"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position =} \StringTok{"none"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
 \includegraphics{Final_Project_files/figure-latex/plots-2.pdf}
-\caption{}
-\end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_rev }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(avg_homewinspct, avg_attendance, }\DataTypeTok{color =}\NormalTok{ sport)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method =}\NormalTok{ lm, }\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{   }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Average Percent of Wins at Home Stadium"}\NormalTok{, }
-       \DataTypeTok{y =} \StringTok{"Average attendance"}\NormalTok{, }
-       \DataTypeTok{title =} \StringTok{"The Relationship Home Wins and Attendance"}\NormalTok{,}
-       \DataTypeTok{subtitle =} \StringTok{"Examining major league sports in the US from 2000-2015"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
 \includegraphics{Final_Project_files/figure-latex/plots-3.pdf}
-\caption{}
-\end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_rev }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(avg_homewinspct, avg_attendance, }\DataTypeTok{color =}\NormalTok{ sport)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{facet_wrap}\NormalTok{(}\OperatorTok{~}\NormalTok{sport)}\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method =}\NormalTok{ lm, }\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{   }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Average Percent of Wins at Home Stadium"}\NormalTok{, }
-       \DataTypeTok{y =} \StringTok{"Average attendance"}\NormalTok{, }
-       \DataTypeTok{title =} \StringTok{"The Relationship Home Wins and Attendance"}\NormalTok{,}
-       \DataTypeTok{subtitle =} \StringTok{"Examining major league sports in the US from 2000-2015"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position =} \StringTok{"none"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
 \includegraphics{Final_Project_files/figure-latex/plots-4.pdf}
-\caption{}
-\end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_crisis <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{group_by}\NormalTok{(year, sport) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{summarize}\NormalTok{(}\DataTypeTok{avg_ticket_price =} \KeywordTok{mean}\NormalTok{(ticket_price), }
-            \DataTypeTok{avg_attendance =} \KeywordTok{mean}\NormalTok{(attend_avg)) }
-
-\NormalTok{sports_crisis }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{filter}\NormalTok{(year }\OperatorTok{>=}\StringTok{ }\DecValTok{2005}\NormalTok{, year }\OperatorTok{<=}\StringTok{ }\DecValTok{2013}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(year, avg_ticket_price, }\DataTypeTok{color =}\NormalTok{ sport)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_line}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{ (}\DataTypeTok{x =} \StringTok{"Year"}\NormalTok{, }
-        \DataTypeTok{y =} \StringTok{"Average Ticket Price (in USD)"}\NormalTok{, }
-        \DataTypeTok{title =} \StringTok{"Major League Sport Ticket Prices During a Financial Crisis"}\NormalTok{,}
-        \DataTypeTok{subtitle =} \StringTok{"Prices in USD from 2005 to 2013"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{figure}
 \centering
@@ -382,68 +150,12 @@ Humphreys, 2007).
 \caption{}
 \end{figure}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_crisis }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{filter}\NormalTok{(year }\OperatorTok{>=}\StringTok{ }\DecValTok{2005}\NormalTok{, year }\OperatorTok{<=}\StringTok{ }\DecValTok{2013}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(year, avg_attendance, }\DataTypeTok{color =}\NormalTok{ sport)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{facet_wrap}\NormalTok{(}\OperatorTok{~}\NormalTok{sport) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_line}\NormalTok{() }\OperatorTok{+}
-\StringTok{   }\KeywordTok{labs}\NormalTok{ (}\DataTypeTok{x =} \StringTok{"Year"}\NormalTok{, }
-        \DataTypeTok{y =} \StringTok{"Average Attendence"}\NormalTok{, }
-        \DataTypeTok{title =} \StringTok{"Major League Sport Attendence During a Financial Crisis"}\NormalTok{,}
-        \DataTypeTok{subtitle =} \StringTok{"Prices in USD from 2005 to 2013"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position =} \StringTok{"none"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
 \includegraphics{Final_Project_files/figure-latex/unnamed-chunk-1-1.pdf}
-\caption{}
-\end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{fit =}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{group_by}\NormalTok{(sport) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{do}\NormalTok{(}\DataTypeTok{model =} \KeywordTok{lm}\NormalTok{(attend_avg }\OperatorTok{~}\StringTok{ }\NormalTok{ticket_price }\OperatorTok{+}\StringTok{ }\NormalTok{home_wins_pct, }\DataTypeTok{data =}\NormalTok{ .))}
-  
-\NormalTok{sports_rev }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{filter}\NormalTok{(sport }\OperatorTok{==}\StringTok{ "MLB"}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(avg_homewinspct, avg_attendance)) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{)}\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Average percent of home wins"}\NormalTok{,}
-       \DataTypeTok{y =} \StringTok{"Average attendance"}\NormalTok{, }
-       \DataTypeTok{title =} \StringTok{"The Relationship Between Average Percent of Home Wins and Attendance"}\NormalTok{,}
-       \DataTypeTok{subtitle =} \StringTok{"MLB statistics from 2000-2015"}\NormalTok{)}\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-\centering
 \includegraphics{Final_Project_files/figure-latex/unnamed-chunk-1-2.pdf}
-\caption{}
-\end{figure}
 
 \subsection{Average Home Attendance, Average Home Ticket Price and
 Average Home Win pct by Sports
 (2000-2015)}\label{average-home-attendance-average-home-ticket-price-and-average-home-win-pct-by-sports-2000-2015}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{group_by}\NormalTok{(sport) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{summarize}\NormalTok{(}\DataTypeTok{avg_attendance =} \KeywordTok{mean}\NormalTok{(attend_avg),}
-            \DataTypeTok{avg_ticket_price =} \KeywordTok{mean}\NormalTok{(ticket_price), }
-            \DataTypeTok{avg_homewinspct =} \KeywordTok{mean}\NormalTok{(home_wins_pct)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{kable}\NormalTok{(}\DataTypeTok{digits =} \DecValTok{2}\NormalTok{,}
-        \DataTypeTok{col.names =} \KeywordTok{c}\NormalTok{(}\StringTok{"sport"}\NormalTok{, }\StringTok{"attendance_mean"}\NormalTok{, }\StringTok{"ticketprice_mean"}\NormalTok{, }\StringTok{"homewinpct_mean"}\NormalTok{), }\DataTypeTok{format =} \StringTok{"latex"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{tabular}{l|r|r|r}
 \hline
@@ -458,23 +170,6 @@ NFL & 68039.56 & 75.29 & 56.86\\
 NHL & 17342.74 & 51.76 & 55.94\\
 \hline
 \end{tabular}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sports_crisis_before <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{filter}\NormalTok{(sport }\OperatorTok{==}\StringTok{ "MLB"}\NormalTok{, year }\OperatorTok{>=}\StringTok{ }\DecValTok{2007}\NormalTok{, year }\OperatorTok{<=}\StringTok{ }\DecValTok{2009}\NormalTok{)}
-
-\NormalTok{sports_crisis_after <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{filter}\NormalTok{(sport }\OperatorTok{==}\StringTok{ "MLB"}\NormalTok{, }
-\NormalTok{         year }\OperatorTok{>=}\StringTok{ }\DecValTok{2010}\NormalTok{, }
-\NormalTok{         year }\OperatorTok{<=}\StringTok{ }\DecValTok{2012}\NormalTok{)}
-  
-\NormalTok{attendance_before <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(sports_crisis_before}\OperatorTok{$}\NormalTok{attend_avg, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
-\NormalTok{price_before <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(sports_crisis_before}\OperatorTok{$}\NormalTok{ticket_price, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
-\NormalTok{attendance_after <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(sports_crisis_after}\OperatorTok{$}\NormalTok{attend_avg, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
-\NormalTok{price_after <-}\StringTok{ }\KeywordTok{mean}\NormalTok{(sports_crisis_after}\OperatorTok{$}\NormalTok{ticket_price, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 Average revenue per homegame for Major league Baseball (MLB) teams
 spanning from 2007 and 2009 is \$794,445.22 while the one for three
@@ -492,35 +187,6 @@ Average revenue per homegame of MLB spanning from 2007 and 2009 is
 crisis} is \$818,114.18. Major League Baseball seems that it was not
 affected by depression in terms of \emph{revenue} and it actually made
 more than before the crisis.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#demonstrating the use of both pivot_longer and pivot_wider}
-\CommentTok{#our data was very clean to begin with so this was for the sake of practice and demonstrating the skill. }
-
-\NormalTok{sports_pivot <-}\StringTok{ }\NormalTok{sports }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{pivot_longer}\NormalTok{(home_wins, }\DataTypeTok{names_to =} \KeywordTok{c}\NormalTok{(}\StringTok{"home"}\NormalTok{, }\StringTok{"wins"}\NormalTok{), }\DataTypeTok{names_sep =} \StringTok{"_"}\NormalTok{, }\DataTypeTok{values_to =} \StringTok{"victory"}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{pivot_wider}\NormalTok{(}\DataTypeTok{names_from =}\NormalTok{ wins, }\DataTypeTok{values_from =}\NormalTok{ victory) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{select}\NormalTok{(}\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\DecValTok{9}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{rename}\NormalTok{(}\DataTypeTok{home_wins =}\NormalTok{ wins)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{## Project Requirements }
-\CommentTok{#1. pivot_longer: done}
-\CommentTok{#2. pivot_wider: done}
-\CommentTok{#3. group_by: Done}
-\CommentTok{#4. summarize: Done}
-\CommentTok{#5. filter: Done}
-\CommentTok{#6. select: Done}
-\CommentTok{#7. mutate: Done }
-\CommentTok{#8. one table: Done}
-\CommentTok{#9. two visualization: Done}
-\CommentTok{#10. inline code: Done}
-\end{Highlighting}
-\end{Shaded}
 
 \section{Methods}\label{methods}
 
@@ -605,12 +271,6 @@ in a city as well as how many time a team has moved.
 \newpage
 
 \section{References}\label{references}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{r_refs}\NormalTok{(}\DataTypeTok{file =} \StringTok{"r-references.bib"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 
 \begingroup
 \setlength{\parindent}{-0.5in} \setlength{\leftskip}{0.5in}
