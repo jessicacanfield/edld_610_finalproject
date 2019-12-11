@@ -23,7 +23,7 @@
 }{}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={EDLD 610 Final Project},
+            pdftitle={Trends in Major League Sports in the U.S. from 2000-2015},
             pdfauthor={Woocheol Kim~\& Jessica Canfield},
             pdfkeywords={sports, NBA, NHL, NFL, MLB, NCAAF},
             pdfborder={0 0 0},
@@ -63,7 +63,7 @@
 \def\footnote{\protect\rmarkdownfootnote}
 
 
-  \title{EDLD 610 Final Project}
+  \title{Trends in Major League Sports in the U.S. from 2000-2015}
     \author{Woocheol Kim\textsuperscript{1}~\& Jessica Canfield\textsuperscript{1}}
     \date{}
   
@@ -95,13 +95,35 @@
 \usepackage{lineno}
 
 \linenumbers
+\usepackage[titles]{tocloft}
+\cftpagenumbersoff{figure}
+\renewcommand{\cftfigpresnum}{\itshape\figurename\enspace}
+\renewcommand{\cftfigaftersnum}{.\space}
+\setlength{\cftfigindent}{0pt}
+\setlength{\cftafterloftitleskip}{0pt}
+\settowidth{\cftfignumwidth}{Figure 10.\qquad}
 
-\authornote{Jessica Canfield \& Woocheol Kim are both Marketing PhD students at the University of Oregon.
+\authornote{Jessica Canfield \& Woocheol Kim are both
+Marketing PhD students at the University of Oregon.
 
-Correspondence concerning this article should be addressed to Woocheol Kim, 1208 University St, Eugene, OR 97403. E-mail: \href{mailto:wkim4@uoregon.edu}{\nolinkurl{wkim4@uoregon.edu}}}
+Correspondence concerning this article should be addressed to Woocheol
+Kim, 1208 University St, Eugene, OR 97403. E-mail:
+\href{mailto:wkim4@uoregon.edu}{\nolinkurl{wkim4@uoregon.edu}}}
 
 \abstract{
-Marketing research has frequently used the context of sports to explore one facet of consumption. Additionally, the data within the sports realm is well-documented and detailed across time which allows for analyses to be tracked across time and different locations. While the current analysis is mainly exploratory in nature the goal of this project is to familiarize ourselves with this dataset prior to using it in future marketing studies. In this project specifically we look at how the 2008 financial crisis impacts ticket price for professional sports teams. However, in the future we plan to use this data in conjunction with other datasets that have unique time and location identifiers to look more specifically at how consumers engage with sports in reaction to other events occuring simultaneously, whether that be financial crises, political uncertainty, or natural disasters.
+Marketing research has frequently used the context of sports to explore
+one facet of consumption. Additionally, the data within the sports realm
+is well-documented and detailed across time which allows for analyses to
+be tracked across time and different locations. While the current
+analysis is mainly exploratory in nature the goal of this project is to
+familiarize ourselves with this dataset prior to using it in future
+marketing studies. In this project specifically we look at how the 2008
+financial crisis impacts ticket price for professional sports teams.
+However, in the future we plan to use this data in conjunction with
+other datasets that have unique time and location identifiers to look
+more specifically at how consumers engage with sports in reaction to
+other events occuring simultaneously, whether that be financial crises,
+political uncertainty, or natural disasters.
 
 
 }
@@ -109,14 +131,29 @@ Marketing research has frequently used the context of sports to explore one face
 \begin{document}
 \maketitle
 
-\hypertarget{introduction-and-overview}{%
-\section{Introduction and Overview}\label{introduction-and-overview}}
+\section{Introduction}\label{introduction}
 
-Humphreys (2010) explores the impact of the global financial crisis on sport in North America. He finds that while attendance and franchise values declined slightly, and a few teams experienced financial problems, the nature of the sport product and institutional factors associated with the sports industry have, so far, insulted professional sport from significant negative impacts. Coates and Humphreys (2007) investigate the demand for attendance at professional sporting events using a data set that includes ticket prices and a price index reflecting prices for ancillary goods associated with attendance. Both mathematical modeling and empirical methodology are used in their research. (see Coates \& Humphreys, 2007).
+Humphreys (2010) explores the impact of the global financial crisis on
+sport in North America. He finds that while attendance and franchise
+values declined slightly, and a few teams experienced notable financial
+problems, the nature of sports as a consumer product in addition to
+institutional factors associated with the sports industry have, so far,
+insulted professional sports from significant negative shocks as the
+result of economic uncertainty. Coates and Humphreys (2007) investigate
+the demand for attendance at professional sporting events using a data
+set that includes ticket prices and a price index reflecting prices for
+ancillary goods associated with attendance. Both mathematical modeling
+and empirical methodology are used in their research (see Coates \&
+Humphreys, 2007).
 
-\includegraphics{Final_Project_files/figure-latex/plots-1.pdf} \includegraphics{Final_Project_files/figure-latex/plots-2.pdf} \includegraphics{Final_Project_files/figure-latex/plots-3.pdf} \includegraphics{Final_Project_files/figure-latex/plots-4.pdf}
+\includegraphics{Final_Project_files/figure-latex/plots-1.pdf}
+\includegraphics{Final_Project_files/figure-latex/plots-2.pdf}
+\includegraphics{Final_Project_files/figure-latex/plots-3.pdf}
+\includegraphics{Final_Project_files/figure-latex/plots-4.pdf}
 
-\includegraphics{Final_Project_files/figure-latex/sports_crisis-1.pdf} \includegraphics{Final_Project_files/figure-latex/sports_crisis-2.pdf} \includegraphics{Final_Project_files/figure-latex/sports_crisis-3.pdf}
+\includegraphics{Final_Project_files/figure-latex/sports_crisis-1.pdf}
+\includegraphics{Final_Project_files/figure-latex/sports_crisis-2.pdf}
+\includegraphics{Final_Project_files/figure-latex/sports_crisis-3.pdf}
 
 \begin{tabular}{l|r|r|r}
 \hline
@@ -132,111 +169,192 @@ NHL & 17342.74 & 51.76 & 55.94\\
 \hline
 \end{tabular}
 
-Average revenue per homegame of MLB spanning from 2007 and 2009 is \$794,445.22 while the one for 3 years after \textbf{financial crisis} is \$818,114.18. Major League Baseball seems that it was not affected by depression in terms of \emph{revenue} and it actually made more than before the crisis.
+Average revenue per homegame for Major league Baseball (MLB) teams
+spanning from 2007 and 2009 is \$794,445.22 while the one for three
+years after \textbf{financial crisis} is \$818,114.18. Major League
+Baseball seems that it was not affected by recesesion in terms of
+\emph{revenue} and it actually made more than before the crisis.
+However, to understand how the recession impacted MLB in greater detail
+we would need to account for other variables.
 
-\hypertarget{methods}{%
-\section{Methods}\label{methods}}
+\section{Methods}\label{methods}
 
-The sports dataset comes from marketing professor Conor Henderson. It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA college football. For each sport, the data spans from 2000 through 2015 and is currently in the process of being updated through present. The data was originally compiled from a number of reputable sports-focused sources including Rodney Fort's Sports League Database as well as ESPN.
-In the final dataset that combines all the sports we have 1398 observations across 15 years and 10 different variables. The 10 variables we selected were: sport, team, year, stadium capacity, total attendance, average attendance, number of games, ticket price (in USD), and the number of home wins.
+The sports dataset was collected by marketing professor Conor Henderson.
+It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA
+college football (NCAAF). For each sport, the data spans from 2000
+through 2015 and is currently in the process of being updated through
+present. The data was originally compiled from a number of reputable
+sports-focused sources including Rodney Fort's Sports League Database as
+well as ESPN. In the final dataset that combines all the sports we have
+1398 observations across 15 years and 10 different variables. The 10
+variables we selected were: sport, team, year, stadium capacity, total
+attendance, average attendance, number of games, ticket price (in USD),
+and the number of home wins.
 
-\hypertarget{participants}{%
-\subsection{Participants}\label{participants}}
+\subsection{Data analysis}\label{data-analysis}
 
-\hypertarget{material}{%
-\subsection{Material}\label{material}}
+We used R (Version 3.6.1; R Core Team, 2019) and the R-packages
+\emph{dplyr} (Version 0.8.3; Wickham, François, Henry, \& Müller, 2019),
+\emph{forcats} (Version 0.4.0; Wickham, 2019a), \emph{ggplot2} (Version
+3.2.1; Wickham, 2016), \emph{here} (Version 0.1; Müller, 2017),
+\emph{janitor} (Version 1.2.0; Firke, 2019), \emph{kableExtra} (Version
+1.1.0; Zhu, 2019), \emph{knitr} (Version 1.25; Xie, 2015), \emph{lme4}
+(Bates, Mächler, Bolker, \& Walker, 2015), \emph{Matrix} (Version
+1.2.17; Bates \& Maechler, 2019), \emph{papaja} (Version 0.1.0.9842;
+Aust \& Barth, 2018), \emph{purrr} (Version 0.3.3; Henry \& Wickham,
+2019), \emph{readr} (Version 1.3.1; Wickham, Hester, \& Francois, 2018),
+\emph{rio} (Version 0.5.16; C.-h. Chan, Chan, Leeper, \& Becker, 2018),
+\emph{stringr} (Version 1.4.0; Wickham, 2019b), \emph{tibble} (Version
+2.1.3; Müller \& Wickham, 2019), \emph{tidyr} (Version 1.0.0; Wickham \&
+Henry, 2019), and \emph{tidyverse} (Version 1.2.1; Wickham, 2017) for
+all our analyses.
 
-\hypertarget{procedure}{%
-\subsection{Procedure}\label{procedure}}
+\section{Results}\label{results}
 
-\hypertarget{data-analysis}{%
-\subsection{Data analysis}\label{data-analysis}}
+In all four leagues, it turns out that average ticket price and average
+rate of home wins is positively associated with average home attendance
+even though NFL fans seem they are not as sensitive to wins as are the
+fans in the three other major league sports. This provides empirical
+evidence for a finding that is relativley intuitive in the sense that as
+teams win more, demand for tickets likely increases which would drive
+prices up. Ultimatley, people enjoy watching their home team win and as
+a result, are willing to pay more when their team is doing well in a
+given season. However, this is likely correlated with the outcomes of
+previous seasons as well.
 
-We used R (Version 3.6.1; R Core Team, 2019) and the R-packages \emph{dplyr} (Version 0.8.3; Wickham et al., 2019), \emph{forcats} (Version 0.4.0; Wickham, 2019a), \emph{ggplot2} (Version 3.2.1; Wickham, 2016), \emph{here} (Version 0.1; Müller, 2017), \emph{janitor} (Version 1.2.0; Firke, 2019), \emph{kableExtra} (Version 1.1.0; Zhu, 2019), \emph{knitr} (Version 1.25; Xie, 2015), \emph{lme4} (Version 1.1.21; Bates, Mächler, Bolker, \& Walker, 2015), \emph{Matrix} (Version 1.2.17; Bates \& Maechler, 2019), \emph{papaja} (Version 0.1.0.9842; Aust \& Barth, 2018), \emph{purrr} (Version 0.3.2; Henry \& Wickham, 2019), \emph{readr} (Version 1.3.1; Wickham, Hester, \& Francois, 2018), \emph{rio} (Version 0.5.16; Chan, Chan, Leeper, \& Becker, 2018), \emph{stringr} (Version 1.4.0; Wickham, 2019b), \emph{tibble} (Version 2.1.3; Müller \& Wickham, 2019), \emph{tidyr} (Version 1.0.0; Wickham \& Henry, 2019), and \emph{tidyverse} (Version 1.2.1; Wickham, 2017) for all our analyses.
+\section{Discussion}\label{discussion}
 
-\hypertarget{results}{%
-\section{Results}\label{results}}
-
-In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem they are not as sensitive to win as other three leagues' fans are.
-
-\hypertarget{discussion}{%
-\section{Discussion}\label{discussion}}
-
-Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated {[}Chalmers2012differences;Shachar2011brands{]}, sports games provide a form of entertainment that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising.
-The current exploratory study provides inital insight into how major league attendance varries over time both in regard to attedance as well as ticket prices. Through the analysis, it is clear that each of the major league sports operates very differently from eachother inregard to the variables of interest isolated for the purposes of this research.
-As this dataset it used going forward, it will be important to identify more clearly the differences between each of the sports to understand if they can indeed be collapsed into an overarching category of \enquote{major league sports attendance} across all four major league sports (MLB, NBA, NFL, NHL). Another aspect that was not taken into account in the current research is team-specific factors including how long the team has beeen in a city as well as how many time a team has moved.
+Sports continue to play an important role in the United States. In an
+time when individuals are becoming increasingly isolated
+{[}Chalmers2012differences;Shachar2011brands{]}, sports games provide a
+form of entertainment from that can be bring people together, whether
+that be through watching the game at the sadium or field or on
+television. While the motivation to watch sports differs for
+individuals, the widespread appeal of watching teams compete provides a
+context for marketers to understand sponshorship, group marketing
+strategies, and targeted advertising. The current exploratory study
+provides inital insight into how major league attendance varries over
+time both in regard to attedance as well as ticket prices. Through the
+analysis, it is clear that each of the major league sports operates very
+differently from eachother inregard to the variables of interest
+isolated for the purposes of this research. As this dataset it used
+going forward, it will be important to identify more clearly the
+differences between each of the sports to understand if they can indeed
+be collapsed into an overarching category of \enquote{major league
+sports attendance} across all four major league sports (MLB, NBA, NFL,
+NHL). Another aspect that was not taken into account in the current
+research is team-specific factors including how long the team has beeen
+in a city as well as how many time a team has moved.
 
 \newpage
 
-\hypertarget{references}{%
-\section{References}\label{references}}
+\section{References}\label{references}
 
 \begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
+\setlength{\parindent}{-0.5in} \setlength{\leftskip}{0.5in}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-R-papaja}{}%
-Aust, F., \& Barth, M. (2018). \emph{papaja: Create APA manuscripts with R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
+\hypertarget{ref-R-papaja}{}
+Aust, F., \& Barth, M. (2018). \emph{papaja: Create APA manuscripts with
+R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
 
-\leavevmode\hypertarget{ref-R-Matrix}{}%
-Bates, D., \& Maechler, M. (2019). \emph{Matrix: Sparse and dense matrix classes and methods}. Retrieved from \url{https://CRAN.R-project.org/package=Matrix}
+\hypertarget{ref-R-Matrix}{}
+Bates, D., \& Maechler, M. (2019). \emph{Matrix: Sparse and dense matrix
+classes and methods}. Retrieved from
+\url{https://CRAN.R-project.org/package=Matrix}
 
-\leavevmode\hypertarget{ref-R-lme4}{}%
-Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2015). Fitting linear mixed-effects models using lme4. \emph{Journal of Statistical Software}, \emph{67}(1), 1--48. doi:\href{https://doi.org/10.18637/jss.v067.i01}{10.18637/jss.v067.i01}
+\hypertarget{ref-R-lme4}{}
+Bates, D., Mächler, M., Bolker, B., \& Walker, S. (2015). Fitting linear
+mixed-effects models using lme4. \emph{Journal of Statistical Software},
+\emph{67}(1), 1--48. \url{https://doi.org/10.18637/jss.v067.i01}
 
-\leavevmode\hypertarget{ref-R-rio}{}%
-Chan, C.-h., Chan, G. C., Leeper, T. J., \& Becker, J. (2018). \emph{Rio: A swiss-army knife for data file i/o}.
+\hypertarget{ref-R-rio}{}
+Chan, C.-h., Chan, G. C., Leeper, T. J., \& Becker, J. (2018).
+\emph{Rio: A swiss-army knife for data file i/o}.
 
-\leavevmode\hypertarget{ref-coates_humphreys_2007}{}%
-Coates, D., \& Humphreys, B. R. (2007). Ticket prices, concessions and attendance at professional sporting events. \emph{International Journal of Sport Finance}, \emph{2}(3), 161.
+\hypertarget{ref-coates_humphreys_2007}{}
+Coates, D., \& Humphreys, B. R. (2007). Ticket prices, concessions and
+attendance at professional sporting events. \emph{International Journal
+of Sport Finance}, \emph{2}(3), 161.
 
-\leavevmode\hypertarget{ref-R-janitor}{}%
-Firke, S. (2019). \emph{Janitor: Simple tools for examining and cleaning dirty data}. Retrieved from \url{https://CRAN.R-project.org/package=janitor}
+\hypertarget{ref-R-janitor}{}
+Firke, S. (2019). \emph{Janitor: Simple tools for examining and cleaning
+dirty data}. Retrieved from
+\url{https://CRAN.R-project.org/package=janitor}
 
-\leavevmode\hypertarget{ref-R-purrr}{}%
-Henry, L., \& Wickham, H. (2019). \emph{Purrr: Functional programming tools}. Retrieved from \url{https://CRAN.R-project.org/package=purrr}
+\hypertarget{ref-R-purrr}{}
+Henry, L., \& Wickham, H. (2019). \emph{Purrr: Functional programming
+tools}. Retrieved from \url{https://CRAN.R-project.org/package=purrr}
 
-\leavevmode\hypertarget{ref-humphreys_2010}{}%
-Humphreys, B. R. (2010). The impact of the global financial crisis on sport in north america. In \emph{Optimal strategies in sports economics and management} (pp. 39--57). Springer.
+\hypertarget{ref-humphreys_2010}{}
+Humphreys, B. R. (2010). The impact of the global financial crisis on
+sport in north america. In \emph{Optimal strategies in sports economics
+and management} (pp. 39--57). Springer.
 
-\leavevmode\hypertarget{ref-R-here}{}%
-Müller, K. (2017). \emph{Here: A simpler way to find your files}. Retrieved from \url{https://CRAN.R-project.org/package=here}
+\hypertarget{ref-R-here}{}
+Müller, K. (2017). \emph{Here: A simpler way to find your files}.
+Retrieved from \url{https://CRAN.R-project.org/package=here}
 
-\leavevmode\hypertarget{ref-R-tibble}{}%
-Müller, K., \& Wickham, H. (2019). \emph{Tibble: Simple data frames}. Retrieved from \url{https://CRAN.R-project.org/package=tibble}
+\hypertarget{ref-R-tibble}{}
+Müller, K., \& Wickham, H. (2019). \emph{Tibble: Simple data frames}.
+Retrieved from \url{https://CRAN.R-project.org/package=tibble}
 
-\leavevmode\hypertarget{ref-R-base}{}%
-R Core Team. (2019). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
+\hypertarget{ref-R-base}{}
+R Core Team. (2019). \emph{R: A language and environment for statistical
+computing}. Vienna, Austria: R Foundation for Statistical Computing.
+Retrieved from \url{https://www.R-project.org/}
 
-\leavevmode\hypertarget{ref-R-ggplot2}{}%
-Wickham, H. (2016). \emph{Ggplot2: Elegant graphics for data analysis}. Springer-Verlag New York. Retrieved from \url{https://ggplot2.tidyverse.org}
+\hypertarget{ref-R-ggplot2}{}
+Wickham, H. (2016). \emph{Ggplot2: Elegant graphics for data analysis}.
+Springer-Verlag New York. Retrieved from
+\url{https://ggplot2.tidyverse.org}
 
-\leavevmode\hypertarget{ref-R-tidyverse}{}%
-Wickham, H. (2017). \emph{Tidyverse: Easily install and load the 'tidyverse'}. Retrieved from \url{https://CRAN.R-project.org/package=tidyverse}
+\hypertarget{ref-R-tidyverse}{}
+Wickham, H. (2017). \emph{Tidyverse: Easily install and load the
+'tidyverse'}. Retrieved from
+\url{https://CRAN.R-project.org/package=tidyverse}
 
-\leavevmode\hypertarget{ref-R-forcats}{}%
-Wickham, H. (2019a). \emph{Forcats: Tools for working with categorical variables (factors)}. Retrieved from \url{https://CRAN.R-project.org/package=forcats}
+\hypertarget{ref-R-forcats}{}
+Wickham, H. (2019a). \emph{Forcats: Tools for working with categorical
+variables (factors)}. Retrieved from
+\url{https://CRAN.R-project.org/package=forcats}
 
-\leavevmode\hypertarget{ref-R-stringr}{}%
-Wickham, H. (2019b). \emph{Stringr: Simple, consistent wrappers for common string operations}. Retrieved from \url{https://CRAN.R-project.org/package=stringr}
+\hypertarget{ref-R-stringr}{}
+Wickham, H. (2019b). \emph{Stringr: Simple, consistent wrappers for
+common string operations}. Retrieved from
+\url{https://CRAN.R-project.org/package=stringr}
 
-\leavevmode\hypertarget{ref-R-dplyr}{}%
-Wickham, H., François, R., Henry, L., \& Müller, K. (2019). \emph{Dplyr: A grammar of data manipulation}. Retrieved from \url{https://CRAN.R-project.org/package=dplyr}
+\hypertarget{ref-R-tidyr}{}
+Wickham, H., \& Henry, L. (2019). \emph{Tidyr: Tidy messy data}.
+Retrieved from \url{https://CRAN.R-project.org/package=tidyr}
 
-\leavevmode\hypertarget{ref-R-tidyr}{}%
-Wickham, H., \& Henry, L. (2019). \emph{Tidyr: Tidy messy data}. Retrieved from \url{https://CRAN.R-project.org/package=tidyr}
+\hypertarget{ref-R-dplyr}{}
+Wickham, H., François, R., Henry, L., \& Müller, K. (2019). \emph{Dplyr:
+A grammar of data manipulation}. Retrieved from
+\url{https://CRAN.R-project.org/package=dplyr}
 
-\leavevmode\hypertarget{ref-R-readr}{}%
-Wickham, H., Hester, J., \& Francois, R. (2018). \emph{Readr: Read rectangular text data}. Retrieved from \url{https://CRAN.R-project.org/package=readr}
+\hypertarget{ref-R-readr}{}
+Wickham, H., Hester, J., \& Francois, R. (2018). \emph{Readr: Read
+rectangular text data}. Retrieved from
+\url{https://CRAN.R-project.org/package=readr}
 
-\leavevmode\hypertarget{ref-R-knitr}{}%
-Xie, Y. (2015). \emph{Dynamic documents with R and knitr} (2nd ed.). Boca Raton, Florida: Chapman; Hall/CRC. Retrieved from \url{https://yihui.name/knitr/}
+\hypertarget{ref-R-knitr}{}
+Xie, Y. (2015). \emph{Dynamic documents with R and knitr} (2nd ed.).
+Boca Raton, Florida: Chapman; Hall/CRC. Retrieved from
+\url{https://yihui.name/knitr/}
 
-\leavevmode\hypertarget{ref-R-kableExtra}{}%
-Zhu, H. (2019). \emph{KableExtra: Construct complex table with 'kable' and pipe syntax}. Retrieved from \url{https://CRAN.R-project.org/package=kableExtra}
+\hypertarget{ref-R-kableExtra}{}
+Zhu, H. (2019). \emph{KableExtra: Construct complex table with 'kable'
+and pipe syntax}. Retrieved from
+\url{https://CRAN.R-project.org/package=kableExtra}
 
 \endgroup
+
+\clearpage
+
+\renewcommand{\listfigurename}{Figure captions}
+
+\listoffigures
 
 
 \end{document}

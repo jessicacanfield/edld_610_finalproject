@@ -1,5 +1,5 @@
 ---
-title             : "EDLD 610 Final Project"
+title             : "Trends in Major League Sports in the U.S. from 2000-2015"
 shorttitle        : "Exploring Trends in Major League Sports "
 
 author: 
@@ -32,7 +32,7 @@ keywords          : "sports, NBA, NHL, NFL, MLB, NCAAF"
 bibliography      : ["r-references.bib"]
 
 floatsintext      : yes
-figurelist        : no
+figurelist        : yes
 tablelist         : no
 footnotelist      : no
 linenumbers       : yes
@@ -63,8 +63,8 @@ library(kableExtra)
 
 ```
 
-# Introduction and Overview
-Humphreys [-@humphreys_2010] explores the impact of the global financial crisis on sport in North America. He finds that while attendance and franchise values declined slightly, and a few teams experienced financial problems, the nature of the sport product and institutional factors associated with the sports industry have, so far, insulted professional sport from significant negative impacts. Coates and Humphreys [-@coates_humphreys_2007] investigate the demand for attendance at professional sporting events using a data set that includes ticket prices and a price index reflecting prices for ancillary goods associated with attendance. Both mathematical modeling and empirical methodology are used in their research. [see @coates_humphreys_2007].
+# Introduction
+Humphreys [-@humphreys_2010] explores the impact of the global financial crisis on sport in North America. He finds that while attendance and franchise values declined slightly, and a few teams experienced notable financial problems, the nature of sports as a consumer product in addition to institutional factors associated with the sports industry have, so far, insulted professional sports from significant negative shocks as the result of economic uncertainty. Coates and Humphreys [-@coates_humphreys_2007] investigate the demand for attendance at professional sporting events using a data set that includes ticket prices and a price index reflecting prices for ancillary goods associated with attendance. Both mathematical modeling and empirical methodology are used in their research [see @coates_humphreys_2007].
 
 ```{r import data}
 mlb <- import(here("Data", "MLB.xlsx")) %>%
@@ -84,9 +84,7 @@ mlb <- mlb %>%
          home_wins = as.numeric(home_wins))
 
 #is.character(mlb$capacity)
-```
 
-```{r}
 nba <- import(here("Data", "NBA.xlsx")) %>%
   characterize() %>%  
   clean_names()%>% 
@@ -147,11 +145,12 @@ sports <- bind_rows(mlb, nba, ncaaf, nfl, nhl)%>%
 
 
 ```{r tidy}
-
+#creating a new variable, the percent of home wins for a team in a given year
 sports <- sports %>%
   mutate(home_wins_pct = home_wins/games*100) %>%
   drop_na()
 
+#creating new variables that are the averages of ticket price, home wins, average attendance, and the percent of home wins
 sports_rev <- sports %>%
   group_by(team, sport) %>%
   summarize(avg_ticket_price = mean(ticket_price), 
@@ -179,7 +178,8 @@ sports_rev %>%
        y = "Average attendance", 
        title = "The Relationship Between Ticket Price & Attendance",
        subtitle = "Examining major league sports in the US from 2000-2015") +
-  theme_minimal() 
+  theme_minimal() +
+  theme(legend.position = "none")
 
 sports_rev %>%
   ggplot(aes(avg_homewinspct, avg_attendance, color = sport)) +
@@ -200,7 +200,8 @@ sports_rev %>%
        y = "Average attendance", 
        title = "The Relationship Home Wins and Attendance",
        subtitle = "Examining major league sports in the US from 2000-2015") +
-  theme_minimal()
+  theme_minimal()+
+  theme(legend.position = "none")
 ```
 
 ```{r sports_crisis}
@@ -228,7 +229,8 @@ sports_crisis %>%
         y = "Average Attendence", 
         title = "Major League Sport Attendence During a Financial Crisis",
         subtitle = "Prices in USD from 2005 to 2013") +
-  theme_minimal()
+  theme_minimal()+
+  theme(legend.position = "none")
 
 
 fit = sports %>%
@@ -272,9 +274,12 @@ price_after <- mean(sports_crisis_after$ticket_price, na.rm = TRUE)
 
 ```
 
-Average revenue per homegame of MLB spanning from 2007 and 2009 is $`r attendance_before*price_before` while the one for 3 years after **financial crisis** is $`r attendance_after*price_after`. Major League Baseball seems that it was not affected by depression in terms of *revenue* and it actually made more than before the crisis.
+Average revenue per homegame for Major league Baseball (MLB) teams spanning from 2007 and 2009 is $`r attendance_before*price_before`  while the one for three years after **financial crisis** is $`r attendance_after*price_after`. Major League Baseball seems that it was not affected by recesesion in terms of *revenue* and it actually made more than before the crisis. However, to understand how the recession impacted MLB in greater detail we would need to account for other variables. 
 
 ```{r pivot}
+#demonstrating the use of both pivot_longer and pivot_wider
+#our data was very clean to begin with so this was for the sake of practice and demonstrating the skill. 
+
 sports_pivot <- sports %>%
   pivot_longer(home_wins, names_to = c("home", "wins"), names_sep = "_", values_to = "victory") %>%
   pivot_wider(names_from = wins, values_from = victory) %>%
@@ -284,38 +289,32 @@ sports_pivot <- sports %>%
 ```
 
 ```{r eval = FALSE}
-## Requirements 
-1. pivot_longer: done
-2. pivot_wider: done
-3. group_by: Done
-4. summarize: Done
-5. filter: Done
-6. select: Done
-7. mutate: Done 
-8. one table: Done
-9. two visualization: Done
-10. inline code: Done
+## Project Requirements 
+#1. pivot_longer: done
+#2. pivot_wider: done
+#3. group_by: Done
+#4. summarize: Done
+#5. filter: Done
+#6. select: Done
+#7. mutate: Done 
+#8. one table: Done
+#9. two visualization: Done
+#10. inline code: Done
 ```  
 
 # Methods
-  The sports dataset comes from marketing professor Conor Henderson. It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA college football. For each sport, the data spans from 2000 through 2015 and is currently in the process of being updated through present. The data was originally compiled from a number of reputable sports-focused sources including Rodney Fort's Sports League Database as well as ESPN.
+  The sports dataset was collected by marketing professor Conor Henderson. It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA college football (NCAAF). For each sport, the data spans from 2000 through 2015 and is currently in the process of being updated through present. The data was originally compiled from a number of reputable sports-focused sources including Rodney Fort's Sports League Database as well as ESPN.
   In the final dataset that combines all the sports we have 1398 observations across 15 years and 10 different variables. The 10 variables we selected were: sport, team, year, stadium capacity, total attendance, average attendance, number of games, ticket price (in USD), and the number of home wins. 
-
-## Participants
-
-## Material
-
-## Procedure
 
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
-In all four leagues, it turns out that average ticket price and average home win rate have a positive relationship with average home attendance even though NFL fans seem they are not as sensitive to win as other three leagues' fans are. 
+In all four leagues, it turns out that average ticket price and average rate of home wins is positively associated with average home attendance even though NFL fans seem they are not as sensitive to wins as are the fans in the three other major league sports. This provides empirical evidence for a finding that is relativley intuitive in the sense that as teams win more, demand for tickets likely increases which would drive prices up. Ultimatley, people enjoy watching their home team win and as a result, are willing to pay more when their team is doing well in a given season. However, this is likely correlated with the outcomes of previous seasons as well. 
 
 # Discussion
-  Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [Chalmers2012differences;Shachar2011brands], sports games provide a form of entertainment that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
+  Sports continue to play an important role in the United States. In an time when individuals are becoming increasingly isolated [Chalmers2012differences;Shachar2011brands], sports games provide a form of entertainment from that can be bring people together, whether that be through watching the game at the sadium or field or on television. While the motivation to watch sports differs for individuals, the widespread appeal of watching teams compete provides a context for marketers to understand sponshorship, group marketing strategies, and targeted advertising. 
   The current exploratory study provides inital insight into how major league attendance varries over time both in regard to attedance as well as ticket prices. Through the analysis, it is clear that each of the major league sports operates very differently from eachother inregard to the variables of interest isolated for the purposes of this research. 
   As this dataset it used going forward, it will be important to identify more clearly the differences between each of the sports to understand if they can indeed be collapsed into an overarching category of "major league sports attendance" across all four major league sports (MLB, NBA, NFL, NHL). Another aspect that was not taken into account in the current research is team-specific factors including how long the team has beeen in a city as well as how many time a team has moved. 
   
