@@ -247,7 +247,7 @@ sports_rev %>%
 
 ```
 
-# Average Home Attendance, Average Home Ticket Price and Average Home Win pct by Sports (2000-2015)
+## Average Home Attendance, Average Home Ticket Price and Average Home Win pct by Sports (2000-2015)
 ```{r summary table, results="asis"}
 sports %>%
   group_by(sport) %>%
@@ -273,7 +273,7 @@ price_after <- mean(sports_crisis_after$ticket_price, na.rm = TRUE)
 ```
 
 
-# Average Home Game Revenue before and after economics recession
+## Average Home Game Revenue before and after economic recession
 Average revenue per homegame of MLB spanning from 2007 and 2009 is $`r attendance_before*price_before` while the one for 3 years after **financial crisis** is $`r attendance_after*price_after`. Major League Baseball seems that it was not affected by depression in terms of *revenue* and it actually made more than before the crisis.
 
 
@@ -286,19 +286,6 @@ sports_pivot <- sports %>%
 
 ```
 
-```{r eval = FALSE}
-## Requirements 
-1. pivot_longer: Done
-2. pivot_wider: Done
-3. group_by: Done
-4. summarize: Done
-5. filter: Done
-6. select: Done
-7. mutate: Done 
-8. one table: Done
-9. two visualization: Done
-10. inline code: Done
-```  
 
 # Methods
   The sports dataset comes from marketing professor Conor Henderson. It covers four major league sports (NBA, MLB, NFL, NHL) as well as NCAA college football. For each sport, the data spans from 2000 through 2015 and is currently in the process of being updated through present. The data was originally compiled from a number of reputable sports-focused sources including Rodney Fort's Sports League Database as well as ESPN.

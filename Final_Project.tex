@@ -376,7 +376,7 @@ Humphreys (2010) explores the impact of the global financial crisis on sport in 
 \includegraphics{Final_Project_files/figure-latex/sports_crisis-3.pdf}
 
 \hypertarget{average-home-attendance-average-home-ticket-price-and-average-home-win-pct-by-sports-2000-2015}{%
-\section{Average Home Attendance, Average Home Ticket Price and Average Home Win pct by Sports (2000-2015)}\label{average-home-attendance-average-home-ticket-price-and-average-home-win-pct-by-sports-2000-2015}}
+\subsection{Average Home Attendance, Average Home Ticket Price and Average Home Win pct by Sports (2000-2015)}\label{average-home-attendance-average-home-ticket-price-and-average-home-win-pct-by-sports-2000-2015}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -419,8 +419,8 @@ NHL & 17342.74 & 51.76 & 55.94\\
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{average-home-game-revenue-before-and-after-economics-recession}{%
-\section{Average Home Game Revenue before and after economics recession}\label{average-home-game-revenue-before-and-after-economics-recession}}
+\hypertarget{average-home-game-revenue-before-and-after-economic-recession}{%
+\subsection{Average Home Game Revenue before and after economic recession}\label{average-home-game-revenue-before-and-after-economic-recession}}
 
 Average revenue per homegame of MLB spanning from 2007 and 2009 is \$794,445.22 while the one for 3 years after \textbf{financial crisis} is \$818,114.18. Major League Baseball seems that it was not affected by depression in terms of \emph{revenue} and it actually made more than before the crisis.
 
@@ -431,22 +431,6 @@ Average revenue per homegame of MLB spanning from 2007 and 2009 is \$794,445.22 
 \StringTok{  }\KeywordTok{pivot_wider}\NormalTok{(}\DataTypeTok{names_from =}\NormalTok{ wins, }\DataTypeTok{values_from =}\NormalTok{ victory) }\OperatorTok{%>%}
 \StringTok{  }\KeywordTok{select}\NormalTok{(}\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\DecValTok{9}\NormalTok{)) }\OperatorTok{%>%}
 \StringTok{  }\KeywordTok{rename}\NormalTok{(}\DataTypeTok{home_wins =}\NormalTok{ wins)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{## Requirements }
-\FloatTok{1.}\NormalTok{ pivot_longer}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{2.}\NormalTok{ pivot_wider}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{3.}\NormalTok{ group_by}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{4.}\NormalTok{ summarize}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{5.}\NormalTok{ filter}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{6.}\NormalTok{ select}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{7.}\NormalTok{ mutate}\OperatorTok{:}\StringTok{ }\NormalTok{Done }
-\FloatTok{8.}\NormalTok{ one table}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{9.}\NormalTok{ two visualization}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
-\FloatTok{10.}\NormalTok{ inline code}\OperatorTok{:}\StringTok{ }\NormalTok{Done}
 \end{Highlighting}
 \end{Shaded}
 
